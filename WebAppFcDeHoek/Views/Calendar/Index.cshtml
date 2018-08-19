@@ -12,23 +12,23 @@
 <table class="table table-bordered table-responsive table-hover">
     
     <tbody>
-    <tr>
-        <th>Competitietype</th>
-        <th>Datum</th>
-        <th>Thuisploeg</th>
-        <th>Uitploeg</th>
-        <th>Uitslag</th>
-    </tr>
+        <tr>
+            <th>Datum</th>
+            <th>Thuisploeg</th>
+            <th>Uitploeg</th>
+            <th>Uitslag</th>
+            <th>Competitietype</th>
+        </tr>
 
     @foreach (var match in Model.Games)
     {
         var cssClass = match.IsNextGame ? "prince" : match.Competition == eCompetitionType.GetCompetitionDescription(eCompetitionType.Cup) ? "beker" : "";
         <tr class=@cssClass>
-            <td>@match.Competition</td>
             <td>@match.MatchDay.ToString("dd/MM/yyyy")</td>
             <td>@match.HomeTeam</td>
             <td>@match.AwayTeam</td>
             <td>@match.Result</td>
+            <td>@match.Competition</td>
         </tr>
     }
 
