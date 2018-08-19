@@ -171,6 +171,7 @@
     </Compile>
     <Compile Include="Models\CalendarModel.cs" />
     <Compile Include="Models\GameModel.cs" />
+    <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\RankingModel.cs" />
     <Compile Include="Models\RankModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

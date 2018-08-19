@@ -5,7 +5,7 @@ namespace WebAppFcDeHoek.Data
 {
     public class FcDeHoekContext : DbContext
     {
-        public FcDeHoekContext() : base("FcDeHoek")
+        public FcDeHoekContext() : base("DeHoek")
         {
         }
 
