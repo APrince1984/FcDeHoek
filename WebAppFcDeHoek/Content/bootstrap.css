@@ -1616,6 +1616,57 @@ table th[class*="col-"] {
   border-color: #e6c1c7;
 }
 
+.table > thead > tr > td.badresult,
+.table > tbody > tr > td.badresult,
+.table > tfoot > tr > td.badresult,
+.table > thead > tr > th.badresult,
+.table > tbody > tr > th.badresult,
+.table > tfoot > tr > th.badresult,
+.table > thead > tr.badresult > td,
+.table > tbody > tr.badresult > td,
+.table > tfoot > tr.badresult > td,
+.table > thead > tr.badresult > th,
+.table > tbody > tr.badresult > th,
+.table > tfoot > tr.badresult > th {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    text-align: center;
+}
+
+.table-hover > tbody > tr > td.badresult:hover,
+.table-hover > tbody > tr > th.badresult:hover,
+.table-hover > tbody > tr.badresult:hover > td {
+    background-color: #ebcccc;
+    border-color: #e6c1c7;
+    text-align: center;
+}
+
+.table > thead > tr > td.goodresult,
+.table > tbody > tr > td.goodresult,
+.table > tfoot > tr > td.goodresult,
+.table > thead > tr > th.goodresult,
+.table > tbody > tr > th.goodresult,
+.table > tfoot > tr > th.goodresult,
+.table > thead > tr.goodresult > td,
+.table > tbody > tr.goodresult > td,
+.table > tfoot > tr.goodresult > td,
+.table > thead > tr.goodresult > th,
+.table > tbody > tr.goodresult > th,
+.table > tfoot > tr.goodresult > th {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    text-align: center;
+}
+
+.table-hover > tbody > tr > td.goodresult:hover,
+.table-hover > tbody > tr > th.goodresult:hover,
+.table-hover > tbody > tr.goodresult:hover > td {
+    background-color: #d0e9c6;
+    border-color: #c9e2b3;
+    text-align: center;
+}
+
+
 .table > thead > tr > td.warning,
 .table > tbody > tr > td.warning,
 .table > tfoot > tr > td.warning,

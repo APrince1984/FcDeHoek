@@ -156,12 +156,10 @@
     <Compile Include="Core\FcDeHoekRuntimeManager.cs" />
     <Compile Include="Data\FcDeHoekContext.cs" />
     <Compile Include="Data\Helper\GameTotal.cs" />
-    <Compile Include="Data\Queries\CalendarQueries.cs" />
     <Compile Include="Data\Queries\GameQueries.cs" />
     <Compile Include="Data\Queries\SeasonQueries.cs" />
     <Compile Include="Data\Queries\TeamQueries.cs" />
     <Compile Include="Data\Tables\BaseDomain.cs" />
-    <Compile Include="Data\Tables\Calendar.cs" />
     <Compile Include="Data\Tables\Game.cs" />
     <Compile Include="Data\Tables\History.cs" />
     <Compile Include="Data\Tables\Season.cs" />
@@ -178,6 +176,7 @@
     <Compile Include="Structs\eCompetitionType.cs" />
     <Compile Include="Structs\eEntry.cs" />
     <Compile Include="Structs\eNavigation.cs" />
+    <Compile Include="Structs\eResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -194,6 +193,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

@@ -1,4 +1,5 @@
-﻿@model WebAppFcDeHoek.Models.HomeModel
+﻿@using WebAppFcDeHoek.Structs
+@model WebAppFcDeHoek.Models.HomeModel
 @{
     ViewBag.Title = Model.TeamName;
 }
@@ -7,13 +8,64 @@
     <h1>@ViewBag.Title</h1>
     <p class="lead">
         @Model.TeamName is een voetbalclub actief in de @Model.CurrentDivision van het @Model.ConvenantName verbond.
-        Thuiswedstrijden worden gespeeld op @Model.SportPark (@Model.Region). Supporters zijn altijd welkom! <br/><br/>
-        Wedstrijden in het @Model.ConvenantName verbond worden afgewerkt op @Model.TimePeriod.
+        Thuiswedstrijden worden gespeeld op @Model.SportPark (@Model.Region). Supporters zijn altijd welkom! <br />
+        Wedstrijden in het @Model.ConvenantName verbond worden afgewerkt op @Model.TimePeriod. <br/>
     </p>
+
+    @if (Model.PreviousGame != null || Model.NextGame != null)
+    {
+        <p>
+            
+            <table class="table table-bordered table-responsive table-hover">
+                <tbody>
+
+                @if (Model.PreviousGame != null)
+                {
+                    var cssClass = Model.PreviousGameResult == eResult.Won ? "goodresult" : Model.PreviousGameResult == eResult.Lost ? "badresult" : "";
+                    <tr>
+                        <td>Vorige wedstrijd:</td>
+                        <td>@Model.PreviousGame.MatchDate.Date.ToString("dd/MM/yyyy")</td>
+                        <td>@Model.PreviousGameHomeTeam.Name - @Model.PreviousGameAwayTeam.Name</td>
+                        <td class="@cssClass">@Model.PreviousGame.GoalsHomeTeam - @Model.PreviousGame.GoalsAwayTeam</td>
+                    </tr>
+                }
+                
+                @if (Model.NextGame != null)
+                {
+                    <tr>
+                        <td>Volgende wedstrijd:</td>
+                        <td>@Model.NextGame.MatchDate.Date.ToString("dd/MM/yyyy")</td>
+                        <td>@Model.NextGameHomeTeam.Name - @Model.NextGameAwayTeam.Name</td>
+                        <td>@Model.NextGame.GoalsHomeTeam - @Model.NextGame.GoalsAwayTeam</td>
+                    </tr>
+                }
+
+                </tbody>
+            </table>
+        </p>
+    }
+
+    
+    
+    <table hidden="hidden" class="table table-bordered table-responsive table-hover">
+        <tbody>
+      
+   
+    @foreach (var el in Model.AllTeams)
+    {
+            <tr>
+                <td>@el.IdTeam</td>
+                <td>@el.Name</td>
+            </tr>
+    }
+        </tbody>
+    </table>
+
     @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
 </div>
 
 <div class="row">
+    <h1>Met dank aan onze sponsors:</h1>
     <div class="col-md-4">
         <h2>Joeri Veryser bvba</h2>
         <p>

@@ -33,8 +33,9 @@ namespace WebAppFcDeHoek.Data.Tables
         [Column("Forfait")]
         public virtual bool Forfait { get; set; }
 
-        [Column("ID_Competition")]
+        [Column("ID_Competition"), ForeignKey("GameCompetition")]
         public virtual int IdCompetition { get; set; }
+        public virtual BaseDomain GameCompetition { get; set; }
 
         [Column("ID_Season")]
         public virtual int IdSeason { get; set; }

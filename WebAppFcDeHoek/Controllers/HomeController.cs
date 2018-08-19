@@ -5,7 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using WebAppFcDeHoek.Data;
 using WebAppFcDeHoek.Data.Queries;
+using WebAppFcDeHoek.Data.Tables;
 using WebAppFcDeHoek.Models;
+using WebAppFcDeHoek.Structs;
 
 namespace WebAppFcDeHoek.Controllers
 {
@@ -13,8 +15,34 @@ namespace WebAppFcDeHoek.Controllers
     {
         public ActionResult Index()
         {
-            var model = new HomeModel { CurrentDivision = GetCurrentDivision()};
-            return View(model);
+            using (var context = new FcDeHoekContext())
+            {
+                var model = new HomeModel
+                {
+                    CurrentDivision = GetCurrentDivision(context),
+                    PreviousGame = GameQueries.GetPreviousGame(context),
+                    NextGame = GameQueries.GetNextGame(context)
+                };
+
+                if (model.PreviousGame != null)
+                {
+                    model.PreviousGameHomeTeam = TeamQueries.GetTeamById(context, model.PreviousGame.IdHomeTeam);
+                    model.PreviousGameAwayTeam = TeamQueries.GetTeamById(context, model.PreviousGame.IdAwayTeam);
+                    model.PreviousGameResult = model.PreviousGameHomeTeam.IdTeam == 1 ? eResult.GetResult(model.PreviousGame.GoalsHomeTeam, model.PreviousGame.GoalsAwayTeam) : eResult.GetResult(model.PreviousGame.GoalsAwayTeam, model.PreviousGame.GoalsHomeTeam);
+                }
+
+
+                if (model.NextGame != null)
+                {
+                    model.NextGameHomeTeam = TeamQueries.GetTeamById(context, model.NextGame.IdHomeTeam);
+                    model.NextGameAwayTeam = TeamQueries.GetTeamById(context, model.NextGame.IdAwayTeam);
+                }
+
+               
+                model.AllTeams = context.Teams.ToList();
+
+                return View(model);
+            }
         }
         
         public ActionResult About()
@@ -31,13 +59,10 @@ namespace WebAppFcDeHoek.Controllers
             return View();
         }
 
-        private string GetCurrentDivision()
+        private string GetCurrentDivision(FcDeHoekContext context)
         {
-            using (var context = new FcDeHoekContext())
-            {
-                var currentSeason = SeasonQueries.GetCurrentSeason(context);
-                return $"{currentSeason.Division}de Reeks";
-            }
+            var currentSeason = SeasonQueries.GetCurrentSeason(context);
+            return $"{currentSeason.Division}de Reeks";
         }
     }
 }
