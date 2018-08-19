@@ -1,0 +1,44 @@
+﻿@model WebAppFcDeHoek.Models.RankingModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Rangschikking Competitie</h2>
+<div>
+    <h4>Season : @Model.Season</h4>
+</div>
+<div>
+    <table class="table table-bordered table-responsive table-hover">
+        <tbody>
+            <tr>
+                <th>Ploeg</th>
+                <th>Gespeeld</th>
+                <th>Gewonnen</th>
+                <th>Gelijk</th>
+                <th>Verloren</th>
+                <th>Doelptn voor</th>
+                <th>Doelptn tegen</th>
+                <th>Punten</th>
+            </tr>
+
+        @foreach (var rank in Model.Ranking)
+        {
+            var cssClass = rank.Team == "F.C. De Hoek" ? "prince" : "";
+            <tr class=@cssClass>
+                <td>@rank.Team</td>
+                <td>@rank.GamesPlayed</td>
+                <td>@rank.GamesWon</td>
+                <td>@rank.GamesDrawn</td>
+                <td>@rank.GamesLost</td>
+                <td>@rank.GoalsScored</td>
+                <td>@rank.GoalsConceded</td>
+                <td>@rank.Points</td>
+            </tr>
+        }
+
+        </tbody>
+    </table>
+</div>
+

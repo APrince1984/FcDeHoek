@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppFcDeHoek", "WebAppFcDeHoek\WebAppFcDeHoek.csproj", "{BF4C8DFE-FFD8-4507-BF0C-16403C99D57B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppFcDeHoek.Tests", "WebAppFcDeHoek.Tests\WebAppFcDeHoek.Tests.csproj", "{BC5C6DEE-2527-40DE-8068-04AE12A94D96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF4C8DFE-FFD8-4507-BF0C-16403C99D57B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4C8DFE-FFD8-4507-BF0C-16403C99D57B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF4C8DFE-FFD8-4507-BF0C-16403C99D57B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4C8DFE-FFD8-4507-BF0C-16403C99D57B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC5C6DEE-2527-40DE-8068-04AE12A94D96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC5C6DEE-2527-40DE-8068-04AE12A94D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC5C6DEE-2527-40DE-8068-04AE12A94D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC5C6DEE-2527-40DE-8068-04AE12A94D96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8493FD88-508C-47AB-B69A-349AE5347788}
+	EndGlobalSection
+EndGlobal
