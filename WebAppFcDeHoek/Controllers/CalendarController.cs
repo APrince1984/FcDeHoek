@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using WebAppFcDeHoek.Data;
 using WebAppFcDeHoek.Data.Queries;
 using WebAppFcDeHoek.Data.Tables;
 using WebAppFcDeHoek.Models;
+using WebAppFcDeHoek.Structs;
 
 namespace WebAppFcDeHoek.Controllers
 {
@@ -16,11 +16,11 @@ namespace WebAppFcDeHoek.Controllers
             using (var context = new FcDeHoekContext())
             {
                 var currentSeason = SeasonQueries.GetCurrentSeason(context);
-                var calendars = CalendarQueries.GetCalendarsByIdSeason(context, currentSeason.IdSeason).OrderBy(c => c.MatchDay).ToList();
+                var calendars = GameQueries.GetAllGamesByIdSeasonAndIdTeam(context, currentSeason.IdSeason, 1).OrderBy(g => g.MatchDate).ToList();
                 var model = new CalendarModel
                 {
                     SeasonDescription =
-                        $"{calendars.FirstOrDefault()?.CalendarSeason.SeasonStartYear} - {calendars.FirstOrDefault()?.CalendarSeason.SeasonEndYear}",
+                        $"{currentSeason.SeasonStartYear} - {currentSeason.SeasonEndYear}",
                     Games = GetGames(context, calendars)
                 };
                 return View(model);
@@ -28,19 +28,23 @@ namespace WebAppFcDeHoek.Controllers
 
         }
 
-        private List<GameModel> GetGames(FcDeHoekContext context, List<Calendar> calendars)
+        private List<GameModel> GetGames(FcDeHoekContext context, List<Game> calendars)
         {
             var games = new List<GameModel>();
-            var nextGame = CalendarQueries.GetNextCalendarGame(context);
+            var nextGame = GameQueries.GetNextGame(context);
             foreach (var calendar in calendars)
             {
                 games.Add(new GameModel
                 {
-                    Competition = calendar.CalendarCompetition.Description,
-                    MatchDay = calendar.MatchDay.Date,
-                    HomeTeam = calendar.CalendarHomeTeam.Name,
-                    AwayTeam = calendar.CalendarAwayTeam.Name,
-                    Result = calendar.Postponed
+                    IdGame = calendar.IdGame,
+                    Competition = calendar.GameCompetition.Description,
+                    MatchDay = calendar.MatchDate.Date,
+                    IdHomeTeam = calendar.IdHomeTeam,
+                    HomeTeam = calendar.GameHomeTeam.Name,
+                    AwayTeam = calendar.GameAwayTeam.Name,
+                    IdAwayTeam = calendar.IdAwayTeam,
+                    GameResult = calendar.IdHomeTeam == 1 ? eResult.GetResult(calendar.GoalsHomeTeam, calendar.GoalsAwayTeam) : eResult.GetResult(calendar.GoalsAwayTeam, calendar.GoalsHomeTeam),
+                    Result = calendar.NotPlayed
                         ? "Afgelast"
                         : !calendar.Forfait
                             ? calendar.GoalsHomeTeam != null
@@ -49,7 +53,7 @@ namespace WebAppFcDeHoek.Controllers
                             : calendar.GoalsHomeTeam != null
                                 ? $"{calendar.GoalsHomeTeam} - {calendar.GoalsAwayTeam} (F.F.)"
                                 : "F.F.",
-                    IsNextGame = calendar.IdCalendar == nextGame.IdCalendar
+                    IsNextGame = calendar.IdGame == nextGame.IdGame
                 });
             }
 

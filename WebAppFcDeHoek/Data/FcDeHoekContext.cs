@@ -13,7 +13,6 @@ namespace WebAppFcDeHoek.Data
         public DbSet<Season> Seasons { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<BaseDomain> BaseDomains { get; set; }
-        public DbSet<Calendar> Calendars { get; set; }
         public DbSet<Game> Games { get; set; }
     }
 }

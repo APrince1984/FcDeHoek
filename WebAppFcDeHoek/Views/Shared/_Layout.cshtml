@@ -30,12 +30,11 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Home), "Index", "Home")</li>
-                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Team), "Index", "Home")</li>
+                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Team), "Index", "UnderConstruction")</li>
                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Calendar), "Index", "Calendar")</li>
                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Ranking), "Index", "Ranking")</li>
-                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.History), "Index", "Home")</li>
+                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.History), "Index", "UnderConstruction")</li>
                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Links), "Index", "Links")</li>
-                <li>@Html.ActionLink("About", "About", "Home")</li>
                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
             </ul>
         </div>
