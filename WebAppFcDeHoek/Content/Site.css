@@ -32,6 +32,146 @@
 
 }
 
+.divTableRow {
+    margin-right: -15px;
+    margin-left: -15px;
+} 
+
+.divTableRow:before,
+.divTableRow:after {
+    display: table;
+    content: " ";
+}
+
+.divTableRow:after {
+    clear: both;
+}
+
+.divTableRow:before,
+.divTableRow:after {
+    display: table;
+    content: " ";
+}
+
+.divTableRow:after {
+    clear: both;
+}
+
+.divTableCol-xs-1,
+.divTableCol-xs-2,
+.divTableCol-xs-3,
+.divTableCol-xs-4,
+.divTableCol-xs-5,
+.divTableCol-xs-6,
+.divTableCol-xs-7,
+.divTableCol-xs-8,
+.divTableCol-xs-9,
+.divTableCol-xs-10,
+.divTableCol-xs-11,
+.divTableCol-xs-12,
+.divTableCol-sm-1,
+.divTableCol-sm-2,
+.divTableCol-sm-3,
+.divTableCol-sm-4,
+.divTableCol-sm-5,
+.divTableCol-sm-6,
+.divTableCol-sm-7,
+.divTableCol-sm-8,
+.divTableCol-sm-9,
+.divTableCol-sm-10,
+.divTableCol-sm-11,
+.divTableCol-sm-12,
+.divTableCol-md-1,
+.divTableCol-md-2,
+.divTableCol-md-3,
+.divTableCol-md-4,
+.divTableCol-md-5,
+.divTableCol-md-6,
+.divTableCol-md-7,
+.divTableCol-md-8,
+.divTableCol-md-9,
+.divTableCol-md-10,
+.divTableCol-md-11,
+.divTableCol-md-12,
+.divTableCol-lg-1,
+.divTableCol-lg-2,
+.divTableCol-lg-3,
+.divTableCol-lg-4,
+.divTableCol-lg-5,
+.divTableCol-lg-6,
+.divTableCol-lg-7,
+.divTableCol-lg-8,
+.divTableCol-lg-9,
+.divTableCol-lg-10,
+.divTableCol-lg-11,
+.divTableCol-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.divTableCol-xs-1,
+.divTableCol-xs-2,
+.divTableCol-xs-3,
+.divTableCol-xs-4,
+.divTableCol-xs-5,
+.divTableCol-xs-6,
+.divTableCol-xs-7,
+.divTableCol-xs-8,
+.divTableCol-xs-9,
+.divTableCol-xs-10,
+.divTableCol-xs-11 {
+    float: left;
+}
+
+.divTableCol-xs-1 {
+    width: 8.333333333333332%;
+}
+
+.divTableCol-xs-2 {
+    width: 16.666666666666664%;
+}
+
+.divTableCol-xs-3 {
+    width: 25%;
+}
+
+.divTableCol-xs-4 {
+    width: 33.33333333333333%;
+}
+
+.divTableCol-xs-5 {
+    width: 41.66666666666667%;
+}
+
+.divTableCol-xs-6 {
+    width: 50%;
+}
+
+.divTableCol-xs-7 {
+    width: 58.333333333333336%;
+}
+
+.divTableCol-xs-8 {
+    width: 66.66666666666666%;
+}
+
+.divTableCol-xs-9 {
+    width: 75%;
+}
+
+.divTableCol-xs-10 {
+    width: 83.33333333333334%;
+}
+
+.divTableCol-xs-11 {
+    width: 91.66666666666666%;
+}
+
+.divTableCol-xs-12 {
+    width: 100%;
+}
 /*img {
     max-width: 100%;
     max-height: 100%;

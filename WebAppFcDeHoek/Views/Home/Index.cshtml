@@ -16,6 +16,23 @@
     {
         <p>
             
+            <div class="divTableRow">
+                @if (Model.PreviousGame != null)
+                {
+                    <div class="divTableCol-md-2">Vorige wedstrijd:</div>
+                    <div class="divTableCol-md-2">@Model.PreviousGame.MatchDate.Date.ToString("dd/MM/yyyy")</div>
+                    <div class="divTableCol-md-2">@Model.PreviousGameHomeTeam.Name - @Model.PreviousGameAwayTeam.Name</div>
+                    <div class="divTableCol-md-2">@Model.PreviousGame.GoalsHomeTeam - @Model.PreviousGame.GoalsAwayTeam</div>
+                }
+                @if (Model.NextGame != null)
+                {
+                    <div class="divTableCol-md-2">Volgende wedstrijd:</div>
+                    <div class="divTableCol-md-2">@Model.NextGame.MatchDate.Date.ToString("dd/MM/yyyy")</div>
+                    <div class="divTableCol-md-2">@Model.NextGameHomeTeam.Name - @Model.NextGameAwayTeam.Name</div>
+                    <div class="divTableCol-md-2">@Model.NextGame.GoalsHomeTeam - @Model.NextGame.GoalsAwayTeam</div>
+                }
+            </div>
+            <br/>
             <table class="table table-bordered table-responsive table-hover">
                 <tbody>
 
