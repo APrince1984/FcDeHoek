@@ -6,9 +6,9 @@
 }
 
 <h2>Rangschikking Competitie</h2>
-<div>
+
     <h4>Season : @Model.Season</h4>
-</div>
+
 <div>
     <table class="table table-bordered table-responsive table-hover">
         <tbody>
@@ -26,7 +26,7 @@
         @foreach (var rank in Model.Ranking)
         {
             var cssClass = rank.Team == "F.C. De Hoek" ? "prince" : "";
-            <tr class=@cssClass>
+            <tr>
                 <td>@rank.Team</td>
                 <td>@rank.GamesPlayed</td>
                 <td>@rank.GamesWon</td>

@@ -24,7 +24,7 @@
     {
         var cssClass = match.IsNextGame ? "prince" : match.Competition == eCompetitionType.GetCompetitionDescription(eCompetitionType.Cup) ? "beker" : "";
         var cssResult = match.GameResult == eResult.Won ? "goodresult" : match.GameResult == eResult.Lost ? "badresult" : "";
-        <tr class=@cssClass>
+        <tr>
             <td hidden="hidden">IdGame = @match.IdGame</td>
             <td>@match.MatchDay.ToString("dd/MM/yyyy")</td>
             <td hidden="hidden">IdHomeTeam = @match.IdHomeTeam</td>
