@@ -32,198 +32,1006 @@
 
 }
 
-.divTableRow {
+.modal-footer-copywright {
+    /*border-top: 1px solid #e5e5e5;*/
+    text-align: right;
+}
+.greyback {
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: inherit;
+    background-color: #eeeeee;
+}
+
+.greyback h1 {
+    line-height: 1;
+    color: inherit;
+}
+
+.greyback p {
+    line-height: 1.4;
+}
+
+.container .greyback {
+    border-radius: 6px;
+}
+
+.row-sponsorFooter {
     margin-right: -15px;
     margin-left: -15px;
-} 
-
-.divTableRow:before,
-.divTableRow:after {
-    display: table;
-    content: " ";
-}
-
-.divTableRow:after {
-    clear: both;
-}
-
-.divTableRow:before,
-.divTableRow:after {
-    display: table;
-    content: " ";
-}
-
-.divTableRow:after {
-    clear: both;
-}
-
-.divTableCol-xs-1,
-.divTableCol-xs-2,
-.divTableCol-xs-3,
-.divTableCol-xs-4,
-.divTableCol-xs-5,
-.divTableCol-xs-6,
-.divTableCol-xs-7,
-.divTableCol-xs-8,
-.divTableCol-xs-9,
-.divTableCol-xs-10,
-.divTableCol-xs-11,
-.divTableCol-xs-12,
-.divTableCol-sm-1,
-.divTableCol-sm-2,
-.divTableCol-sm-3,
-.divTableCol-sm-4,
-.divTableCol-sm-5,
-.divTableCol-sm-6,
-.divTableCol-sm-7,
-.divTableCol-sm-8,
-.divTableCol-sm-9,
-.divTableCol-sm-10,
-.divTableCol-sm-11,
-.divTableCol-sm-12,
-.divTableCol-md-1,
-.divTableCol-md-2,
-.divTableCol-md-3,
-.divTableCol-md-4,
-.divTableCol-md-5,
-.divTableCol-md-6,
-.divTableCol-md-7,
-.divTableCol-md-8,
-.divTableCol-md-9,
-.divTableCol-md-10,
-.divTableCol-md-11,
-.divTableCol-md-12,
-.divTableCol-lg-1,
-.divTableCol-lg-2,
-.divTableCol-lg-3,
-.divTableCol-lg-4,
-.divTableCol-lg-5,
-.divTableCol-lg-6,
-.divTableCol-lg-7,
-.divTableCol-lg-8,
-.divTableCol-lg-9,
-.divTableCol-lg-10,
-.divTableCol-lg-11,
-.divTableCol-lg-12 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.divTableCol-xs-1,
-.divTableCol-xs-2,
-.divTableCol-xs-3,
-.divTableCol-xs-4,
-.divTableCol-xs-5,
-.divTableCol-xs-6,
-.divTableCol-xs-7,
-.divTableCol-xs-8,
-.divTableCol-xs-9,
-.divTableCol-xs-10,
-.divTableCol-xs-11 {
-    float: left;
-}
-
-.divTableCol-xs-1 {
-    width: 8.333333333333332%;
-}
-
-.divTableCol-xs-2 {
-    width: 16.666666666666664%;
-}
-
-.divTableCol-xs-3 {
-    width: 25%;
-}
-
-.divTableCol-xs-4 {
-    width: 33.33333333333333%;
-}
-
-.divTableCol-xs-5 {
-    width: 41.66666666666667%;
-}
-
-.divTableCol-xs-6 {
-    width: 50%;
-}
-
-.divTableCol-xs-7 {
-    width: 58.333333333333336%;
-}
-
-.divTableCol-xs-8 {
-    width: 66.66666666666666%;
-}
-
-.divTableCol-xs-9 {
-    width: 75%;
-}
-
-.divTableCol-xs-10 {
-    width: 83.33333333333334%;
-}
-
-.divTableCol-xs-11 {
-    width: 91.66666666666666%;
-}
-
-.divTableCol-xs-12 {
-    width: 100%;
-}
-/*img {
-    max-width: 100%;
-    max-height: 100%;
-    min-height: 100%;
-    min-width: 100%;
-}
-
-image {
-    max-width: 100%;
-    max-height: 100%;
-    min-height: 100%;
-    min-width: 100%;
-}*/
-/*.headerImage {
-    top: 0;
-    margin-left: 0;
-    margin-right: 0;
-   
-}*/
-.headerImage {
-    top: 0;
     padding-left: 15px;
     padding-right: 15px;
-    margin: 0;
-    width: 100%;
-    height: 250px;
 }
 
-    .headerImage img.wide {
-        max-width: 100%;
-        max-height: 100%;
-        height: auto;
-        width: auto;
+.row-sponsorFooter > col-md-4 {
+    text-align: center;
+    margin: auto;
+}
+/* table result column colors*/
+.table > thead > tr > td.badresult,
+.table > tbody > tr > td.badresult,
+.table > tfoot > tr > td.badresult,
+.table > thead > tr > th.badresult,
+.table > tbody > tr > th.badresult,
+.table > tfoot > tr > th.badresult,
+.table > thead > tr.badresult > td,
+.table > tbody > tr.badresult > td,
+.table > tfoot > tr.badresult > td,
+.table > thead > tr.badresult > th,
+.table > tbody > tr.badresult > th,
+.table > tfoot > tr.badresult > th {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    text-align: center;
+}
+
+.table-hover > tbody > tr > td.badresult:hover,
+.table-hover > tbody > tr > th.badresult:hover,
+.table-hover > tbody > tr.badresult:hover > td {
+    background-color: #ebcccc;
+    border-color: #e6c1c7;
+    text-align: center;
+}
+
+.table > thead > tr > td.goodresult,
+.table > tbody > tr > td.goodresult,
+.table > tfoot > tr > td.goodresult,
+.table > thead > tr > th.goodresult,
+.table > tbody > tr > th.goodresult,
+.table > tfoot > tr > th.goodresult,
+.table > thead > tr.goodresult > td,
+.table > tbody > tr.goodresult > td,
+.table > tfoot > tr.goodresult > td,
+.table > thead > tr.goodresult > th,
+.table > tbody > tr.goodresult > th,
+.table > tfoot > tr.goodresult > th {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    text-align: center;
+}
+
+.table-hover > tbody > tr > td.goodresult:hover,
+.table-hover > tbody > tr > th.goodresult:hover,
+.table-hover > tbody > tr.goodresult:hover > td {
+    background-color: #d0e9c6;
+    border-color: #c9e2b3;
+    text-align: center;
+}
+
+/* make sponsor images responsive*/
+
+.sponsorImage {
+    width: 300px;
+    height: 200px;
+    max-width: 300px;
+    max-height: 200px;
+}
+
+/* make table text size responsive*/
+
+@media (min-width: 1200px) {
+    .row-sponsorFooter,
+    .table-responsive,
+    .table-responsive > .table,
+    .table-responsive > .table-bordered > thead > tr > th:first-child,
+    .table-responsive > .table-bordered > tbody > tr > th:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+    .table-responsive > .table-bordered > thead > tr > td:first-child,
+    .table-responsive > .table-bordered > tbody > tr > td:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:first-child,
+    .table-responsive > .table-bordered > thead > tr > th:last-child,
+    .table-responsive > .table-bordered > tbody > tr > th:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+    .table-responsive > .table-bordered > thead > tr > td:last-child,
+    .table-responsive > .table-bordered > tbody > tr > td:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:last-child,
+    .table-responsive > .table-bordered > thead > tr:last-child > th,
+    .table-responsive > .table-bordered > tbody > tr:last-child > th,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+    .table-responsive > .table-bordered > thead > tr:last-child > td,
+    .table-responsive > .table-bordered > tbody > tr:last-child > td,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+    .table > thead > tr > td.warning,
+    .table > tbody > tr > td.warning,
+    .table > tfoot > tr > td.warning,
+    .table > thead > tr > th.warning,
+    .table > tbody > tr > th.warning,
+    .table > tfoot > tr > th.warning,
+    .table > thead > tr.warning > td,
+    .table > tbody > tr.warning > td,
+    .table > tfoot > tr.warning > td,
+    .table > thead > tr.warning > th,
+    .table > tbody > tr.warning > th,
+    .table > tfoot > tr.warning > th,
+    .table > thead > tr > td.danger,
+    .table > tbody > tr > td.danger,
+    .table > tfoot > tr > td.danger,
+    .table > thead > tr > th.danger,
+    .table > tbody > tr > th.danger,
+    .table > tfoot > tr > th.danger,
+    .table > thead > tr.danger > td,
+    .table > tbody > tr.danger > td,
+    .table > tfoot > tr.danger > td,
+    .table > thead > tr.danger > th,
+    .table > tbody > tr.danger > th,
+    .table > tfoot > tr.danger > th,
+    .table > thead > tr > td.beker,
+    .table > tbody > tr > td.beker,
+    .table > tfoot > tr > td.beker,
+    .table > thead > tr > th.beker,
+    .table > tbody > tr > th.beker,
+    .table > tfoot > tr > th.beker,
+    .table > thead > tr.beker > td,
+    .table > tbody > tr.beker > td,
+    .table > tfoot > tr.beker > td,
+    .table > thead > tr.beker > th,
+    .table > tbody > tr.beker > th,
+    .table > tfoot > tr.beker > th,
+    .table > thead > tr > td.success,
+    .table > tbody > tr > td.success,
+    .table > tfoot > tr > td.success,
+    .table > thead > tr > th.success,
+    .table > tbody > tr > th.success,
+    .table > tfoot > tr > th.success,
+    .table > thead > tr.success > td,
+    .table > tbody > tr.success > td,
+    .table > tfoot > tr.success > td,
+    .table > thead > tr.success > th,
+    .table > tbody > tr.success > th,
+    .table > tfoot > tr.success > th,
+    .table > thead > tr > td.active,
+    .table > tbody > tr > td.active,
+    .table > tfoot > tr > td.active,
+    .table > thead > tr > th.active,
+    .table > tbody > tr > th.active,
+    .table > tfoot > tr > th.active,
+    .table > thead > tr.active > td,
+    .table > tbody > tr.active > td,
+    .table > tfoot > tr.active > td,
+    .table > thead > tr.active > th,
+    .table > tbody > tr.active > th,
+    .table > tfoot > tr.active > th {
+        font-size: 100%;
     }
 
-    .headerImage img.tall {
-        max-height: 100%;
-        max-width: 100%;
-        width: auto;
+    .sponsorImage {
+        height: 100%;
+        width: 100%;
+
+    }
+}
+
+@media (min-width: 938px) and (max-width: 1199px) {
+    .row-sponsorFooter,
+    .table-responsive,
+    .table-responsive > .table,
+    .table-responsive > .table-bordered > thead > tr > th:first-child,
+    .table-responsive > .table-bordered > tbody > tr > th:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+    .table-responsive > .table-bordered > thead > tr > td:first-child,
+    .table-responsive > .table-bordered > tbody > tr > td:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:first-child,
+    .table-responsive > .table-bordered > thead > tr > th:last-child,
+    .table-responsive > .table-bordered > tbody > tr > th:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+    .table-responsive > .table-bordered > thead > tr > td:last-child,
+    .table-responsive > .table-bordered > tbody > tr > td:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:last-child,
+    .table-responsive > .table-bordered > thead > tr:last-child > th,
+    .table-responsive > .table-bordered > tbody > tr:last-child > th,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+    .table-responsive > .table-bordered > thead > tr:last-child > td,
+    .table-responsive > .table-bordered > tbody > tr:last-child > td,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+    .table > thead > tr > td.warning,
+    .table > tbody > tr > td.warning,
+    .table > tfoot > tr > td.warning,
+    .table > thead > tr > th.warning,
+    .table > tbody > tr > th.warning,
+    .table > tfoot > tr > th.warning,
+    .table > thead > tr.warning > td,
+    .table > tbody > tr.warning > td,
+    .table > tfoot > tr.warning > td,
+    .table > thead > tr.warning > th,
+    .table > tbody > tr.warning > th,
+    .table > tfoot > tr.warning > th,
+    .table > thead > tr > td.danger,
+    .table > tbody > tr > td.danger,
+    .table > tfoot > tr > td.danger,
+    .table > thead > tr > th.danger,
+    .table > tbody > tr > th.danger,
+    .table > tfoot > tr > th.danger,
+    .table > thead > tr.danger > td,
+    .table > tbody > tr.danger > td,
+    .table > tfoot > tr.danger > td,
+    .table > thead > tr.danger > th,
+    .table > tbody > tr.danger > th,
+    .table > tfoot > tr.danger > th,
+    .table > thead > tr > td.beker,
+    .table > tbody > tr > td.beker,
+    .table > tfoot > tr > td.beker,
+    .table > thead > tr > th.beker,
+    .table > tbody > tr > th.beker,
+    .table > tfoot > tr > th.beker,
+    .table > thead > tr.beker > td,
+    .table > tbody > tr.beker > td,
+    .table > tfoot > tr.beker > td,
+    .table > thead > tr.beker > th,
+    .table > tbody > tr.beker > th,
+    .table > tfoot > tr.beker > th,
+    .table > thead > tr > td.success,
+    .table > tbody > tr > td.success,
+    .table > tfoot > tr > td.success,
+    .table > thead > tr > th.success,
+    .table > tbody > tr > th.success,
+    .table > tfoot > tr > th.success,
+    .table > thead > tr.success > td,
+    .table > tbody > tr.success > td,
+    .table > tfoot > tr.success > td,
+    .table > thead > tr.success > th,
+    .table > tbody > tr.success > th,
+    .table > tfoot > tr.success > th,
+    .table > thead > tr > td.active,
+    .table > tbody > tr > td.active,
+    .table > tfoot > tr > td.active,
+    .table > thead > tr > th.active,
+    .table > tbody > tr > th.active,
+    .table > tfoot > tr > th.active,
+    .table > thead > tr.active > td,
+    .table > tbody > tr.active > td,
+    .table > tfoot > tr.active > td,
+    .table > thead > tr.active > th,
+    .table > tbody > tr.active > th,
+    .table > tfoot > tr.active > th {
+        font-size: 95%;
     }
 
-​
-/* Override the default bootstrap behavior where horizontal description lists 
+    .sponsorImage {
+        height: 100%;
+        width: 100%;
+    }
+
+    .row-sponsorFooter > h1,
+    .row-sponsorFooter > h2,
+    .row-sponsorFooter > col-md-4 > h2,
+    .col-md-4 > h2,
+    .row-sponsorFooter > h1 > h2 {
+        font-size: 1.9em;
+    }
+}
+
+@media (min-width: 756px) and (max-width: 937px) {
+    .row-sponsorFooter,
+    .table-responsive,
+    .table-responsive > .table,
+    .table-responsive > .table-bordered > thead > tr > th:first-child,
+    .table-responsive > .table-bordered > tbody > tr > th:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+    .table-responsive > .table-bordered > thead > tr > td:first-child,
+    .table-responsive > .table-bordered > tbody > tr > td:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:first-child,
+    .table-responsive > .table-bordered > thead > tr > th:last-child,
+    .table-responsive > .table-bordered > tbody > tr > th:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+    .table-responsive > .table-bordered > thead > tr > td:last-child,
+    .table-responsive > .table-bordered > tbody > tr > td:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:last-child,
+    .table-responsive > .table-bordered > thead > tr:last-child > th,
+    .table-responsive > .table-bordered > tbody > tr:last-child > th,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+    .table-responsive > .table-bordered > thead > tr:last-child > td,
+    .table-responsive > .table-bordered > tbody > tr:last-child > td,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+    .table > thead > tr > td.warning,
+    .table > tbody > tr > td.warning,
+    .table > tfoot > tr > td.warning,
+    .table > thead > tr > th.warning,
+    .table > tbody > tr > th.warning,
+    .table > tfoot > tr > th.warning,
+    .table > thead > tr.warning > td,
+    .table > tbody > tr.warning > td,
+    .table > tfoot > tr.warning > td,
+    .table > thead > tr.warning > th,
+    .table > tbody > tr.warning > th,
+    .table > tfoot > tr.warning > th,
+    .table > thead > tr > td.danger,
+    .table > tbody > tr > td.danger,
+    .table > tfoot > tr > td.danger,
+    .table > thead > tr > th.danger,
+    .table > tbody > tr > th.danger,
+    .table > tfoot > tr > th.danger,
+    .table > thead > tr.danger > td,
+    .table > tbody > tr.danger > td,
+    .table > tfoot > tr.danger > td,
+    .table > thead > tr.danger > th,
+    .table > tbody > tr.danger > th,
+    .table > tfoot > tr.danger > th,
+    .table > thead > tr > td.beker,
+    .table > tbody > tr > td.beker,
+    .table > tfoot > tr > td.beker,
+    .table > thead > tr > th.beker,
+    .table > tbody > tr > th.beker,
+    .table > tfoot > tr > th.beker,
+    .table > thead > tr.beker > td,
+    .table > tbody > tr.beker > td,
+    .table > tfoot > tr.beker > td,
+    .table > thead > tr.beker > th,
+    .table > tbody > tr.beker > th,
+    .table > tfoot > tr.beker > th,
+    .table > thead > tr > td.success,
+    .table > tbody > tr > td.success,
+    .table > tfoot > tr > td.success,
+    .table > thead > tr > th.success,
+    .table > tbody > tr > th.success,
+    .table > tfoot > tr > th.success,
+    .table > thead > tr.success > td,
+    .table > tbody > tr.success > td,
+    .table > tfoot > tr.success > td,
+    .table > thead > tr.success > th,
+    .table > tbody > tr.success > th,
+    .table > tfoot > tr.success > th,
+    .table > thead > tr > td.active,
+    .table > tbody > tr > td.active,
+    .table > tfoot > tr > td.active,
+    .table > thead > tr > th.active,
+    .table > tbody > tr > th.active,
+    .table > tfoot > tr > th.active,
+    .table > thead > tr.active > td,
+    .table > tbody > tr.active > td,
+    .table > tfoot > tr.active > td,
+    .table > thead > tr.active > th,
+    .table > tbody > tr.active > th,
+    .table > tfoot > tr.active > th {
+        font-size: 85%;
+    }
+
+        .row-sponsorFooter > h1,
+        .row-sponsorFooter > h2,
+        .row-sponsorFooter > col-md-4 > h2,
+        .col-md-4 > h2,
+        .row-sponsorFooter > h1 > h2 {
+            font-size: 1.8em;
+        }
+
+    .sponsorImage {
+        height: 90%;
+        width: 90%;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 755px) {
+    .row-sponsorFooter,
+    .table-responsive,
+    .table-responsive > .table,
+    .table-responsive > .table-bordered > thead > tr > th:first-child,
+    .table-responsive > .table-bordered > tbody > tr > th:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+    .table-responsive > .table-bordered > thead > tr > td:first-child,
+    .table-responsive > .table-bordered > tbody > tr > td:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:first-child,
+    .table-responsive > .table-bordered > thead > tr > th:last-child,
+    .table-responsive > .table-bordered > tbody > tr > th:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+    .table-responsive > .table-bordered > thead > tr > td:last-child,
+    .table-responsive > .table-bordered > tbody > tr > td:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:last-child,
+    .table-responsive > .table-bordered > thead > tr:last-child > th,
+    .table-responsive > .table-bordered > tbody > tr:last-child > th,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+    .table-responsive > .table-bordered > thead > tr:last-child > td,
+    .table-responsive > .table-bordered > tbody > tr:last-child > td,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+    .table > thead > tr > td.warning,
+    .table > tbody > tr > td.warning,
+    .table > tfoot > tr > td.warning,
+    .table > thead > tr > th.warning,
+    .table > tbody > tr > th.warning,
+    .table > tfoot > tr > th.warning,
+    .table > thead > tr.warning > td,
+    .table > tbody > tr.warning > td,
+    .table > tfoot > tr.warning > td,
+    .table > thead > tr.warning > th,
+    .table > tbody > tr.warning > th,
+    .table > tfoot > tr.warning > th,
+    .table > thead > tr > td.danger,
+    .table > tbody > tr > td.danger,
+    .table > tfoot > tr > td.danger,
+    .table > thead > tr > th.danger,
+    .table > tbody > tr > th.danger,
+    .table > tfoot > tr > th.danger,
+    .table > thead > tr.danger > td,
+    .table > tbody > tr.danger > td,
+    .table > tfoot > tr.danger > td,
+    .table > thead > tr.danger > th,
+    .table > tbody > tr.danger > th,
+    .table > tfoot > tr.danger > th,
+    .table > thead > tr > td.beker,
+    .table > tbody > tr > td.beker,
+    .table > tfoot > tr > td.beker,
+    .table > thead > tr > th.beker,
+    .table > tbody > tr > th.beker,
+    .table > tfoot > tr > th.beker,
+    .table > thead > tr.beker > td,
+    .table > tbody > tr.beker > td,
+    .table > tfoot > tr.beker > td,
+    .table > thead > tr.beker > th,
+    .table > tbody > tr.beker > th,
+    .table > tfoot > tr.beker > th,
+    .table > thead > tr > td.success,
+    .table > tbody > tr > td.success,
+    .table > tfoot > tr > td.success,
+    .table > thead > tr > th.success,
+    .table > tbody > tr > th.success,
+    .table > tfoot > tr > th.success,
+    .table > thead > tr.success > td,
+    .table > tbody > tr.success > td,
+    .table > tfoot > tr.success > td,
+    .table > thead > tr.success > th,
+    .table > tbody > tr.success > th,
+    .table > tfoot > tr.success > th,
+    .table > thead > tr > td.active,
+    .table > tbody > tr > td.active,
+    .table > tfoot > tr > td.active,
+    .table > thead > tr > th.active,
+    .table > tbody > tr > th.active,
+    .table > tfoot > tr > th.active,
+    .table > thead > tr.active > td,
+    .table > tbody > tr.active > td,
+    .table > tfoot > tr.active > td,
+    .table > thead > tr.active > th,
+    .table > tbody > tr.active > th,
+    .table > tfoot > tr.active > th {
+        font-size: 78%;
+    }
+
+        .row-sponsorFooter > h1,
+        .row-sponsorFooter > h2,
+        .row-sponsorFooter > col-md-4 > h2,
+        .col-md-4 > h2,
+        .row-sponsorFooter > h1 > h2 {
+            font-size: 1.7em;
+        }
+
+    .sponsorImage {
+        height: 85%;
+        width: 85%;
+    }
+}
+
+@media (max-width: 649px) {
+    .row-sponsorFooter > h1,
+    .row-sponsorFooter > h2,
+    .row-sponsorFooter > col-md-4 > h2,
+    .col-md-4 > h2,
+    .row-sponsorFooter > h1 > h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 649px) {
+    .row-sponsorFooter,
+    .table-responsive,
+    .table-responsive > .table,
+    .table-responsive > .table-bordered > thead > tr > th:first-child,
+    .table-responsive > .table-bordered > tbody > tr > th:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+    .table-responsive > .table-bordered > thead > tr > td:first-child,
+    .table-responsive > .table-bordered > tbody > tr > td:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:first-child,
+    .table-responsive > .table-bordered > thead > tr > th:last-child,
+    .table-responsive > .table-bordered > tbody > tr > th:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+    .table-responsive > .table-bordered > thead > tr > td:last-child,
+    .table-responsive > .table-bordered > tbody > tr > td:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:last-child,
+    .table-responsive > .table-bordered > thead > tr:last-child > th,
+    .table-responsive > .table-bordered > tbody > tr:last-child > th,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+    .table-responsive > .table-bordered > thead > tr:last-child > td,
+    .table-responsive > .table-bordered > tbody > tr:last-child > td,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+    .table > thead > tr > td.warning,
+    .table > tbody > tr > td.warning,
+    .table > tfoot > tr > td.warning,
+    .table > thead > tr > th.warning,
+    .table > tbody > tr > th.warning,
+    .table > tfoot > tr > th.warning,
+    .table > thead > tr.warning > td,
+    .table > tbody > tr.warning > td,
+    .table > tfoot > tr.warning > td,
+    .table > thead > tr.warning > th,
+    .table > tbody > tr.warning > th,
+    .table > tfoot > tr.warning > th,
+    .table > thead > tr > td.danger,
+    .table > tbody > tr > td.danger,
+    .table > tfoot > tr > td.danger,
+    .table > thead > tr > th.danger,
+    .table > tbody > tr > th.danger,
+    .table > tfoot > tr > th.danger,
+    .table > thead > tr.danger > td,
+    .table > tbody > tr.danger > td,
+    .table > tfoot > tr.danger > td,
+    .table > thead > tr.danger > th,
+    .table > tbody > tr.danger > th,
+    .table > tfoot > tr.danger > th,
+    .table > thead > tr > td.beker,
+    .table > tbody > tr > td.beker,
+    .table > tfoot > tr > td.beker,
+    .table > thead > tr > th.beker,
+    .table > tbody > tr > th.beker,
+    .table > tfoot > tr > th.beker,
+    .table > thead > tr.beker > td,
+    .table > tbody > tr.beker > td,
+    .table > tfoot > tr.beker > td,
+    .table > thead > tr.beker > th,
+    .table > tbody > tr.beker > th,
+    .table > tfoot > tr.beker > th,
+    .table > thead > tr > td.success,
+    .table > tbody > tr > td.success,
+    .table > tfoot > tr > td.success,
+    .table > thead > tr > th.success,
+    .table > tbody > tr > th.success,
+    .table > tfoot > tr > th.success,
+    .table > thead > tr.success > td,
+    .table > tbody > tr.success > td,
+    .table > tfoot > tr.success > td,
+    .table > thead > tr.success > th,
+    .table > tbody > tr.success > th,
+    .table > tfoot > tr.success > th,
+    .table > thead > tr > td.active,
+    .table > tbody > tr > td.active,
+    .table > tfoot > tr > td.active,
+    .table > thead > tr > th.active,
+    .table > tbody > tr > th.active,
+    .table > tfoot > tr > th.active,
+    .table > thead > tr.active > td,
+    .table > tbody > tr.active > td,
+    .table > tfoot > tr.active > td,
+    .table > thead > tr.active > th,
+    .table > tbody > tr.active > th,
+    .table > tfoot > tr.active > th {
+        font-size: 65%;
+    }
+
+    .sponsorImage {
+        height: 80%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 599px) {
+    .sponsorImage {
+        height: 70%;
+        width: 70%;
+    }
+}
+
+@media (min-width: 530px) and (max-width: 599px) {
+    .row-sponsorFooter,
+    .table-responsive,
+    .table-responsive > .table,
+    .table-responsive > .table-bordered > thead > tr > th:first-child,
+    .table-responsive > .table-bordered > tbody > tr > th:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+    .table-responsive > .table-bordered > thead > tr > td:first-child,
+    .table-responsive > .table-bordered > tbody > tr > td:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:first-child,
+    .table-responsive > .table-bordered > thead > tr > th:last-child,
+    .table-responsive > .table-bordered > tbody > tr > th:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+    .table-responsive > .table-bordered > thead > tr > td:last-child,
+    .table-responsive > .table-bordered > tbody > tr > td:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:last-child,
+    .table-responsive > .table-bordered > thead > tr:last-child > th,
+    .table-responsive > .table-bordered > tbody > tr:last-child > th,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+    .table-responsive > .table-bordered > thead > tr:last-child > td,
+    .table-responsive > .table-bordered > tbody > tr:last-child > td,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+    .table > thead > tr > td.warning,
+    .table > tbody > tr > td.warning,
+    .table > tfoot > tr > td.warning,
+    .table > thead > tr > th.warning,
+    .table > tbody > tr > th.warning,
+    .table > tfoot > tr > th.warning,
+    .table > thead > tr.warning > td,
+    .table > tbody > tr.warning > td,
+    .table > tfoot > tr.warning > td,
+    .table > thead > tr.warning > th,
+    .table > tbody > tr.warning > th,
+    .table > tfoot > tr.warning > th,
+    .table > thead > tr > td.danger,
+    .table > tbody > tr > td.danger,
+    .table > tfoot > tr > td.danger,
+    .table > thead > tr > th.danger,
+    .table > tbody > tr > th.danger,
+    .table > tfoot > tr > th.danger,
+    .table > thead > tr.danger > td,
+    .table > tbody > tr.danger > td,
+    .table > tfoot > tr.danger > td,
+    .table > thead > tr.danger > th,
+    .table > tbody > tr.danger > th,
+    .table > tfoot > tr.danger > th,
+    .table > thead > tr > td.beker,
+    .table > tbody > tr > td.beker,
+    .table > tfoot > tr > td.beker,
+    .table > thead > tr > th.beker,
+    .table > tbody > tr > th.beker,
+    .table > tfoot > tr > th.beker,
+    .table > thead > tr.beker > td,
+    .table > tbody > tr.beker > td,
+    .table > tfoot > tr.beker > td,
+    .table > thead > tr.beker > th,
+    .table > tbody > tr.beker > th,
+    .table > tfoot > tr.beker > th,
+    .table > thead > tr > td.success,
+    .table > tbody > tr > td.success,
+    .table > tfoot > tr > td.success,
+    .table > thead > tr > th.success,
+    .table > tbody > tr > th.success,
+    .table > tfoot > tr > th.success,
+    .table > thead > tr.success > td,
+    .table > tbody > tr.success > td,
+    .table > tfoot > tr.success > td,
+    .table > thead > tr.success > th,
+    .table > tbody > tr.success > th,
+    .table > tfoot > tr.success > th,
+    .table > thead > tr > td.active,
+    .table > tbody > tr > td.active,
+    .table > tfoot > tr > td.active,
+    .table > thead > tr > th.active,
+    .table > tbody > tr > th.active,
+    .table > tfoot > tr > th.active,
+    .table > thead > tr.active > td,
+    .table > tbody > tr.active > td,
+    .table > tfoot > tr.active > td,
+    .table > thead > tr.active > th,
+    .table > tbody > tr.active > th,
+    .table > tfoot > tr.active > th {
+        font-size: 60%;
+    }
+}
+
+@media (min-width: 470px) and (max-width: 529px) {
+    .row-sponsorFooter,
+    .table-responsive,
+    .table-responsive > .table,
+    .table-responsive > .table-bordered > thead > tr > th:first-child,
+    .table-responsive > .table-bordered > tbody > tr > th:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+    .table-responsive > .table-bordered > thead > tr > td:first-child,
+    .table-responsive > .table-bordered > tbody > tr > td:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:first-child,
+    .table-responsive > .table-bordered > thead > tr > th:last-child,
+    .table-responsive > .table-bordered > tbody > tr > th:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+    .table-responsive > .table-bordered > thead > tr > td:last-child,
+    .table-responsive > .table-bordered > tbody > tr > td:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:last-child,
+    .table-responsive > .table-bordered > thead > tr:last-child > th,
+    .table-responsive > .table-bordered > tbody > tr:last-child > th,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+    .table-responsive > .table-bordered > thead > tr:last-child > td,
+    .table-responsive > .table-bordered > tbody > tr:last-child > td,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+    .table > thead > tr > td.warning,
+    .table > tbody > tr > td.warning,
+    .table > tfoot > tr > td.warning,
+    .table > thead > tr > th.warning,
+    .table > tbody > tr > th.warning,
+    .table > tfoot > tr > th.warning,
+    .table > thead > tr.warning > td,
+    .table > tbody > tr.warning > td,
+    .table > tfoot > tr.warning > td,
+    .table > thead > tr.warning > th,
+    .table > tbody > tr.warning > th,
+    .table > tfoot > tr.warning > th,
+    .table > thead > tr > td.danger,
+    .table > tbody > tr > td.danger,
+    .table > tfoot > tr > td.danger,
+    .table > thead > tr > th.danger,
+    .table > tbody > tr > th.danger,
+    .table > tfoot > tr > th.danger,
+    .table > thead > tr.danger > td,
+    .table > tbody > tr.danger > td,
+    .table > tfoot > tr.danger > td,
+    .table > thead > tr.danger > th,
+    .table > tbody > tr.danger > th,
+    .table > tfoot > tr.danger > th,
+    .table > thead > tr > td.beker,
+    .table > tbody > tr > td.beker,
+    .table > tfoot > tr > td.beker,
+    .table > thead > tr > th.beker,
+    .table > tbody > tr > th.beker,
+    .table > tfoot > tr > th.beker,
+    .table > thead > tr.beker > td,
+    .table > tbody > tr.beker > td,
+    .table > tfoot > tr.beker > td,
+    .table > thead > tr.beker > th,
+    .table > tbody > tr.beker > th,
+    .table > tfoot > tr.beker > th,
+    .table > thead > tr > td.success,
+    .table > tbody > tr > td.success,
+    .table > tfoot > tr > td.success,
+    .table > thead > tr > th.success,
+    .table > tbody > tr > th.success,
+    .table > tfoot > tr > th.success,
+    .table > thead > tr.success > td,
+    .table > tbody > tr.success > td,
+    .table > tfoot > tr.success > td,
+    .table > thead > tr.success > th,
+    .table > tbody > tr.success > th,
+    .table > tfoot > tr.success > th,
+    .table > thead > tr > td.active,
+    .table > tbody > tr > td.active,
+    .table > tfoot > tr > td.active,
+    .table > thead > tr > th.active,
+    .table > tbody > tr > th.active,
+    .table > tfoot > tr > th.active,
+    .table > thead > tr.active > td,
+    .table > tbody > tr.active > td,
+    .table > tfoot > tr.active > td,
+    .table > thead > tr.active > th,
+    .table > tbody > tr.active > th,
+    .table > tfoot > tr.active > th {
+        font-size: 55%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 469px) {
+    .row-sponsorFooter,
+    .table-responsive,
+    .table-responsive > .table,
+    .table-responsive > .table-bordered > thead > tr > th:first-child,
+    .table-responsive > .table-bordered > tbody > tr > th:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+    .table-responsive > .table-bordered > thead > tr > td:first-child,
+    .table-responsive > .table-bordered > tbody > tr > td:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:first-child,
+    .table-responsive > .table-bordered > thead > tr > th:last-child,
+    .table-responsive > .table-bordered > tbody > tr > th:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+    .table-responsive > .table-bordered > thead > tr > td:last-child,
+    .table-responsive > .table-bordered > tbody > tr > td:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:last-child,
+    .table-responsive > .table-bordered > thead > tr:last-child > th,
+    .table-responsive > .table-bordered > tbody > tr:last-child > th,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+    .table-responsive > .table-bordered > thead > tr:last-child > td,
+    .table-responsive > .table-bordered > tbody > tr:last-child > td,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+    .table > thead > tr > td.warning,
+    .table > tbody > tr > td.warning,
+    .table > tfoot > tr > td.warning,
+    .table > thead > tr > th.warning,
+    .table > tbody > tr > th.warning,
+    .table > tfoot > tr > th.warning,
+    .table > thead > tr.warning > td,
+    .table > tbody > tr.warning > td,
+    .table > tfoot > tr.warning > td,
+    .table > thead > tr.warning > th,
+    .table > tbody > tr.warning > th,
+    .table > tfoot > tr.warning > th,
+    .table > thead > tr > td.danger,
+    .table > tbody > tr > td.danger,
+    .table > tfoot > tr > td.danger,
+    .table > thead > tr > th.danger,
+    .table > tbody > tr > th.danger,
+    .table > tfoot > tr > th.danger,
+    .table > thead > tr.danger > td,
+    .table > tbody > tr.danger > td,
+    .table > tfoot > tr.danger > td,
+    .table > thead > tr.danger > th,
+    .table > tbody > tr.danger > th,
+    .table > tfoot > tr.danger > th,
+    .table > thead > tr > td.beker,
+    .table > tbody > tr > td.beker,
+    .table > tfoot > tr > td.beker,
+    .table > thead > tr > th.beker,
+    .table > tbody > tr > th.beker,
+    .table > tfoot > tr > th.beker,
+    .table > thead > tr.beker > td,
+    .table > tbody > tr.beker > td,
+    .table > tfoot > tr.beker > td,
+    .table > thead > tr.beker > th,
+    .table > tbody > tr.beker > th,
+    .table > tfoot > tr.beker > th,
+    .table > thead > tr > td.success,
+    .table > tbody > tr > td.success,
+    .table > tfoot > tr > td.success,
+    .table > thead > tr > th.success,
+    .table > tbody > tr > th.success,
+    .table > tfoot > tr > th.success,
+    .table > thead > tr.success > td,
+    .table > tbody > tr.success > td,
+    .table > tfoot > tr.success > td,
+    .table > thead > tr.success > th,
+    .table > tbody > tr.success > th,
+    .table > tfoot > tr.success > th,
+    .table > thead > tr > td.active,
+    .table > tbody > tr > td.active,
+    .table > tfoot > tr > td.active,
+    .table > thead > tr > th.active,
+    .table > tbody > tr > th.active,
+    .table > tfoot > tr > th.active,
+    .table > thead > tr.active > td,
+    .table > tbody > tr.active > td,
+    .table > tfoot > tr.active > td,
+    .table > thead > tr.active > th,
+    .table > tbody > tr.active > th,
+    .table > tfoot > tr.active > th {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 399px) {
+    .row-sponsorFooter,
+    .table-responsive,
+    .table-responsive > .table,
+    .table-responsive > .table-bordered > thead > tr > th:first-child,
+    .table-responsive > .table-bordered > tbody > tr > th:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+    .table-responsive > .table-bordered > thead > tr > td:first-child,
+    .table-responsive > .table-bordered > tbody > tr > td:first-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:first-child,
+    .table-responsive > .table-bordered > thead > tr > th:last-child,
+    .table-responsive > .table-bordered > tbody > tr > th:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+    .table-responsive > .table-bordered > thead > tr > td:last-child,
+    .table-responsive > .table-bordered > tbody > tr > td:last-child,
+    .table-responsive > .table-bordered > tfoot > tr > td:last-child,
+    .table-responsive > .table-bordered > thead > tr:last-child > th,
+    .table-responsive > .table-bordered > tbody > tr:last-child > th,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+    .table-responsive > .table-bordered > thead > tr:last-child > td,
+    .table-responsive > .table-bordered > tbody > tr:last-child > td,
+    .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+    .table > thead > tr > td.warning,
+    .table > tbody > tr > td.warning,
+    .table > tfoot > tr > td.warning,
+    .table > thead > tr > th.warning,
+    .table > tbody > tr > th.warning,
+    .table > tfoot > tr > th.warning,
+    .table > thead > tr.warning > td,
+    .table > tbody > tr.warning > td,
+    .table > tfoot > tr.warning > td,
+    .table > thead > tr.warning > th,
+    .table > tbody > tr.warning > th,
+    .table > tfoot > tr.warning > th,
+    .table > thead > tr > td.danger,
+    .table > tbody > tr > td.danger,
+    .table > tfoot > tr > td.danger,
+    .table > thead > tr > th.danger,
+    .table > tbody > tr > th.danger,
+    .table > tfoot > tr > th.danger,
+    .table > thead > tr.danger > td,
+    .table > tbody > tr.danger > td,
+    .table > tfoot > tr.danger > td,
+    .table > thead > tr.danger > th,
+    .table > tbody > tr.danger > th,
+    .table > tfoot > tr.danger > th,
+    .table > thead > tr > td.beker,
+    .table > tbody > tr > td.beker,
+    .table > tfoot > tr > td.beker,
+    .table > thead > tr > th.beker,
+    .table > tbody > tr > th.beker,
+    .table > tfoot > tr > th.beker,
+    .table > thead > tr.beker > td,
+    .table > tbody > tr.beker > td,
+    .table > tfoot > tr.beker > td,
+    .table > thead > tr.beker > th,
+    .table > tbody > tr.beker > th,
+    .table > tfoot > tr.beker > th,
+    .table > thead > tr > td.success,
+    .table > tbody > tr > td.success,
+    .table > tfoot > tr > td.success,
+    .table > thead > tr > th.success,
+    .table > tbody > tr > th.success,
+    .table > tfoot > tr > th.success,
+    .table > thead > tr.success > td,
+    .table > tbody > tr.success > td,
+    .table > tfoot > tr.success > td,
+    .table > thead > tr.success > th,
+    .table > tbody > tr.success > th,
+    .table > tfoot > tr.success > th,
+    .table > thead > tr > td.active,
+    .table > tbody > tr > td.active,
+    .table > tfoot > tr > td.active,
+    .table > thead > tr > th.active,
+    .table > tbody > tr > th.active,
+    .table > tfoot > tr > th.active,
+    .table > thead > tr.active > td,
+    .table > tbody > tr.active > td,
+    .table > tfoot > tr.active > td,
+    .table > thead > tr.active > th,
+    .table > tbody > tr.active > th,
+    .table > tfoot > tr.active > th {
+        font-size: 45%;
+    }
+
+    .sponsorImage {
+        height: 80%;
+        width: 80%;
+    }
+}
+
+
+/* end off table text responsiveness*/
+
+    @media screen and (min-width: 768px) {
+        .greyback {
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+
+        .container .greyback {
+            padding-right: 60px;
+            padding-left: 60px;
+        }
+
+        .greyback h1 {
+            font-size: 63px;
+        }
+    }
+
+  
+    
+    .headerImage {
+        top: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0;
+        width: 100%;
+        height: 250px;
+    }
+
+        .headerImage img.wide {
+            max-width: 100%;
+            max-height: 100%;
+            height: auto;
+            width: auto;
+        }
+
+        .headerImage img.tall {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+        }
+
+    ​
+    /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-.dl-horizontal dt {
-    white-space: normal;
-}
+    .dl-horizontal dt {
+        white-space: normal;
+    }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
+    /* Set width on the form input elements since they're 100% wide by default */
+    input,
+    select,
+    textarea {
+        max-width: 280px;
+    }

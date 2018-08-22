@@ -4,37 +4,17 @@
     ViewBag.Title = Model.TeamName;
 }
 
-<div class="jumbotron">
+<div class="greyback">
     <h1>@ViewBag.Title</h1>
     <p class="lead">
         @Model.TeamName is een voetbalclub actief in de @Model.CurrentDivision van het @Model.ConvenantName verbond.
         Thuiswedstrijden worden gespeeld op @Model.SportPark (@Model.Region). Supporters zijn altijd welkom! <br />
-        Wedstrijden in het @Model.ConvenantName verbond worden afgewerkt op @Model.TimePeriod. <br/>
+        Wedstrijden in het @Model.ConvenantName verbond worden afgewerkt op @Model.TimePeriod. <br />
     </p>
-
-    @if (Model.PreviousGame != null || Model.NextGame != null)
-    {
-        <p>
-            
-            <div class="divTableRow">
-                @if (Model.PreviousGame != null)
-                {
-                    <div class="divTableCol-md-2">Vorige wedstrijd:</div>
-                    <div class="divTableCol-md-2">@Model.PreviousGame.MatchDate.Date.ToString("dd/MM/yyyy")</div>
-                    <div class="divTableCol-md-2">@Model.PreviousGameHomeTeam.Name - @Model.PreviousGameAwayTeam.Name</div>
-                    <div class="divTableCol-md-2">@Model.PreviousGame.GoalsHomeTeam - @Model.PreviousGame.GoalsAwayTeam</div>
-                }
-                @if (Model.NextGame != null)
-                {
-                    <div class="divTableCol-md-2">Volgende wedstrijd:</div>
-                    <div class="divTableCol-md-2">@Model.NextGame.MatchDate.Date.ToString("dd/MM/yyyy")</div>
-                    <div class="divTableCol-md-2">@Model.NextGameHomeTeam.Name - @Model.NextGameAwayTeam.Name</div>
-                    <div class="divTableCol-md-2">@Model.NextGame.GoalsHomeTeam - @Model.NextGame.GoalsAwayTeam</div>
-                }
-            </div>
-            <br/>
-            <table class="table table-bordered table-responsive table-hover">
-                <tbody>
+    <br />
+    <p>
+        <table class="table table-bordered table-responsive table-hover">
+            <tbody>
 
                 @if (Model.PreviousGame != null)
                 {
@@ -42,69 +22,40 @@
                     <tr>
                         <td>Vorige wedstrijd:</td>
                         <td>@Model.PreviousGame.MatchDate.Date.ToString("dd/MM/yyyy")</td>
-                        <td>@Model.PreviousGameHomeTeam.Name - @Model.PreviousGameAwayTeam.Name</td>
-                        <td class="@cssClass">@Model.PreviousGame.GoalsHomeTeam - @Model.PreviousGame.GoalsAwayTeam</td>
+                        <td>@Model.PreviousGameHomeTeam.Name </td><td> @Model.PreviousGameAwayTeam.Name</td>
+                        <td class="@cssClass">@Model.PreviousGame.GoalsHomeTeam&nbsp;-&nbsp;@Model.PreviousGame.GoalsAwayTeam</td>
                     </tr>
                 }
-                
+
                 @if (Model.NextGame != null)
                 {
                     <tr>
                         <td>Volgende wedstrijd:</td>
                         <td>@Model.NextGame.MatchDate.Date.ToString("dd/MM/yyyy")</td>
-                        <td>@Model.NextGameHomeTeam.Name - @Model.NextGameAwayTeam.Name</td>
-                        <td>@Model.NextGame.GoalsHomeTeam - @Model.NextGame.GoalsAwayTeam</td>
+                        <td>@Model.NextGameHomeTeam.Name </td>
+                        <td> @Model.NextGameAwayTeam.Name</td>
+                        <td>@Model.NextGame.GoalsHomeTeam&nbsp;-&nbsp;@Model.NextGame.GoalsAwayTeam</td>
                     </tr>
                 }
 
-                </tbody>
-            </table>
+            </tbody>
+        </table>
         </p>
-    }
+    
 
-    
-    
     <table hidden="hidden" class="table table-bordered table-responsive table-hover">
         <tbody>
-      
-   
-    @foreach (var el in Model.AllTeams)
-    {
-            <tr>
-                <td>@el.IdTeam</td>
-                <td>@el.Name</td>
-            </tr>
-    }
+
+
+            @foreach (var el in Model.AllTeams)
+            {
+                <tr>
+                    <td>@el.IdTeam</td>
+                    <td>@el.Name</td>
+                </tr>
+            }
         </tbody>
     </table>
 
     @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
-</div>
-
-<div class="row">
-    <h1>Met dank aan onze sponsors:</h1>
-    <div class="col-md-4">
-        <h2>Joeri Veryser bvba</h2>
-        <p>
-            <img width="300" height="200" src="http://gdurl.com/lluc" alt="Can't load Image'"/>
-        </p>
-        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
-    </div>
-    <div class="col-md-4">
-        <h2>Andy Claeys</h2>
-        <p>
-            Schrijn- en timmerwerken Claeys Andy <br/>
-        </p>
-        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>*@
-    </div>
-    <div class="col-md-4">
-        <h2>Café Sportwereld</h2>
-        <p>
-            Stationsstraat 98, 8400 Oostende
-        </p>
-        <p>
-            <img width="300" height="200" src="http://gdurl.com/7wLy" alt="Can't load Image'"/>
-        </p>
-        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
-    </div>
 </div>

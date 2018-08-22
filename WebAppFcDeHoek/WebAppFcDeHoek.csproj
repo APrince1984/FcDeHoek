@@ -226,6 +226,7 @@
     <Content Include="Views\Ranking\Index.cshtml" />
     <Content Include="Views\Calendar\Index.cshtml" />
     <Content Include="Views\UnderConstruction\Index.cshtml" />
+    <Content Include="Views\Shared\_Sponsors.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

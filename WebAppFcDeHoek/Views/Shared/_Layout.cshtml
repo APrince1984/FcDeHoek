@@ -44,7 +44,39 @@
     @RenderBody()
     <hr/>
     <footer>
-        <p>&copy; @DateTime.Now.Year - @FcDeHoekRuntimeManager.ClubName</p>
+        @*<div class="footer footer-fixed-bottom">*@
+            <div class="row-sponsorFooter">
+                <h1>Met dank aan onze sponsors:</h1>
+                <div class="col-md-4">
+                    <h2>Joeri Veryser bvba</h2>
+                    <p>
+                        <img class="sponsorImage" src="http://gdurl.com/lluc" alt="Can't load Image'" />
+                    </p>
+                    @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
+                </div>
+                <div class="col-md-4">
+                    <h2>Andy Claeys</h2>
+                    <p>
+                        Schrijn- en timmerwerken Claeys Andy <br />
+                    </p>
+                    @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>*@
+                </div>
+                <div class="col-md-4">
+                    <h2>Café Sportwereld</h2>
+                    <p>
+                        Stationsstraat 98, 8400 Oostende
+                    </p>
+                    <p>
+                        <img class="sponsorImage" src="http://gdurl.com/7wLy" alt="Can't load Image'" />
+                    </p>
+                    @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
+                </div>
+            </div>
+        @*</div>*@
+            <div class="modal-footer-copywright">
+                <p>&copy; @DateTime.Now.Year - @FcDeHoekRuntimeManager.ClubName</p>
+            </div>
+
     </footer>
 </div>
 
