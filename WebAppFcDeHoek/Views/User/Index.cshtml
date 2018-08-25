@@ -1,0 +1,42 @@
+﻿@model List<WebAppFcDeHoek.Models.UserModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Users</h2>
+
+<div>
+    @using (Html.BeginForm("EditUser", "User", FormMethod.Get,
+        new {enctype = "multipart/form-data", @class = "form-group"}))
+    {
+        <table class="table table-bordered table-responsive table-hover">
+            <tbody>
+            <tr>
+                <th class="TableTitle" hidden="hidden">ID</th>
+                <th class="TableTitle">Username</th>
+                <th class="TableTitle">IsAdmin</th>
+                <th class="TableTitle">Obsolete</th>
+                <th class="TableTitle">Action</th>
+            </tr>
+
+            @foreach (var singleUser in Model)
+            {
+                <tr>
+                    <td hidden="hidden">@singleUser.IdUser</td>
+                    <td>@Html.Label(singleUser.UserName)</td>
+                    <td>@Html.CheckBoxFor(model => model.First(m => m.IdUser == singleUser.IdUser).IsAdmin, new { @disabled = "disabled" })</td>
+                    <td>@Html.CheckBoxFor(model => model.First(m => m.IdUser == singleUser.IdUser).Obsolete, new { @disabled = "disabled" })</td>
+
+                    <td><input type="button" id="btnEdit" name="btnEdit" value="Wijzigen" onclick="location.href='@Url.Action("EditUser", "User", new { idUser = @singleUser.IdUser })'" class="btn btn-primary" /></td>
+                </tr>
+            }
+
+            </tbody>
+        </table>
+    }
+</div>
+
+
+

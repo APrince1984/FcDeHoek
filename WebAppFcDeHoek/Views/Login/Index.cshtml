@@ -1,0 +1,37 @@
+﻿@model WebAppFcDeHoek.Models.LoginModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Log In</h2>
+<div class="container">
+
+    @using (Html.BeginForm("LogIn", "Login", FormMethod.Post,
+        new { enctype = "multipart/form-data", @class="form-group" }))
+    {
+        <p>
+            <div class="form-group row">
+                @Html.Label("Gebruikersnaam: ", new { @class = "control-label col-md-2" })
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+                </div>
+            </div>
+        </p>
+        <p>
+            <div class="form-group row">
+                @Html.Label("Wachtwoord: ", new { @class = "control-label col-md-2" })
+                <div class="col-sm-10">
+                    @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                </div>
+            </div>
+        </p>
+        <p>
+            <div class="form-group row">
+                <input type="submit" id="btnLogin" name="btnLogin" value="Aanmelden" class="btn btn-primary" />
+            </div>
+        </p>
+    }
+</div>
+

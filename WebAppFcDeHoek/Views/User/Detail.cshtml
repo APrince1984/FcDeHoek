@@ -1,0 +1,46 @@
+﻿@model WebAppFcDeHoek.Models.UserModel
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User Detail - @Model.IdUser</h2>
+
+@using (Html.BeginForm("SaveUser", "User", FormMethod.Post,
+    new { enctype = "multipart/form-data", @class = "form-group" }))
+{
+    <div hidden="hidden">
+        @Html.TextBoxFor(model => model.IdUser, new { @class = "form-control" })
+    </div>
+    <p>
+        <div class="form-group row">
+            @Html.Label("UserName: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+    <p>
+        <div class="form-group row">
+            @Html.Label("Is Administrator: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.CheckBoxFor(model => model.IsAdmin)
+            </div>
+        </div>
+    </p>
+    <p>
+        <div class="form-group row">
+            @Html.Label("Is Obsolete: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.CheckBoxFor(model => model.Obsolete)
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            <input type="submit" id="btnSave" name="btnSave" value="Opslaan" class="btn btn-primary" />
+        </div>
+    </p>
+}

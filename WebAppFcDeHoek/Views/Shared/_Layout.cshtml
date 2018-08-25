@@ -11,11 +11,7 @@
 </head>
 <body>
 <div class="header header-fixed-top">
-    <div class="header FixedLogin"> @eEntry.EntryDescription(@Session["EntryStatus"] != null 
-                                        ? int.TryParse(@Session["EntryStatus"].ToString(), out var entryStatus) 
-                                            ? entryStatus 
-                                            : eEntry.LogIn
-                                        : eEntry.LogIn)</div>
+    
     @*<div class="header headerImage"><img src="../../Images/TeamPic1.jpg"></div>*@
 </div>
 <div class="navbar navbar-inverse navbar-static-top">
@@ -36,6 +32,33 @@
                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.History), "Index", "UnderConstruction")</li>
                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Links), "Index", "Links")</li>
                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @if (@Session["IsAdmin"] != null)
+                {
+                    var isAdmin = false;
+                    bool.TryParse(Session["IsAdmin"].ToString(), out isAdmin);
+                    if (isAdmin)
+                    {
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="False">@eNavigation.GetNavigationDescription(eNavigation.Editor)<span class="caret"></span></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageScores), "Index", "UnderConstruction")</li>
+                                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageUsers), "Index", "User")</li>
+                                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageGames), "Index", "GameManager")</li>
+                                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageTeams), "Index", "UnderConstruction")</li>
+                                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageSeasons), "Index", "UnderConstruction")</li>
+                                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageHistory), "Index", "UnderConstruction")</li>
+                            </ul>
+                        </li>
+                    }
+                    <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.LogOut), "LogOut", "Login")</li>
+
+                }
+                else
+                {
+                    <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Login), "Index", "Login")</li>
+                }
             </ul>
         </div>
     </div>

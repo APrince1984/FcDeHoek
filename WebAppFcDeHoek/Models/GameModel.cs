@@ -14,5 +14,11 @@ namespace WebAppFcDeHoek.Models
         public string Result { get; set; }
         public bool IsNextGame { get; set; }
         public int GameResult { get; set; }
+
+        public bool IsPostPoned { get; set; }
+        public bool Forfait { get; set; }
+        public int IdSeason { get; set; }
+        public int IdCompetition { get; set; }
+        public int? IdPostPonedGame { get; set; }
     }
 }

@@ -6,6 +6,12 @@ namespace WebAppFcDeHoek.Data.Queries
 {
     public static class GameQueries
     {
+        public static IQueryable<Game> GetAllGamesBetweenDates(FcDeHoekContext context, DateTime startDate,
+            DateTime endDate)
+        {
+            return context.Games.Where(g => g.MatchDate >= startDate && g.MatchDate <= endDate);
+        }
+
         public static IQueryable<Game> GetAllGamesByIdTeam(FcDeHoekContext context, int idTeam)
         {
             return context.Games.Where(g => g.IdHomeTeam == idTeam || g.IdAwayTeam == idTeam);

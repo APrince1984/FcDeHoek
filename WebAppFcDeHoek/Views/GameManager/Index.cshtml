@@ -1,0 +1,59 @@
+﻿@model WebAppFcDeHoek.Models.GameManagerModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Games</h2>
+
+<div class="container">
+
+    @using (Html.BeginForm("Index", "GameManager", FormMethod.Post,
+        new { enctype = "multipart/form-data", @class = "form-group" }))
+    {
+        <p>
+            <div class="form-group row">
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.StartDate, new { @class = "form-control col-md-3" })
+                    @Html.Label("-", new { @class = "col-sm-1" })
+                    @Html.TextBoxFor(model => model.EndDate, new { @class = "form-control col-md-3"})
+                </div>
+            </div>
+        </p>
+        <table class="table table-bordered table-responsive table-hover">
+            <tbody>
+                <tr>
+                    <th class="TableTitle" hidden="hidden">ID</th>
+                    <th class="TableTitle">Datum</th>
+                    <th class="TableTitle">Thuisploeg</th>
+                    <th class="TableTitle" hidden="hidden">ID_Home</th>
+                    <th class="TableTitle">Uitploeg</th>
+                    <th class="TableTitle" hidden="hidden">ID_Away</th>
+                    <th class="TableTitle">Uitslag</th>
+                    <th class="TableTitle">Competitietype</th>
+                    <th class="TableTitle" hidden="hidden">ID_Competition</th>
+                    <th class="TableTitle">Action</th>
+                </tr>
+
+            @foreach (var game in Model.Games)
+            {
+                <tr>
+                    <td hidden="hidden">@game.IdGame</td>
+                    <td>@game.MatchDay</td>
+                    <td>@game.HomeTeam</td>
+                    <td hidden="hidden">@game.IdHomeTeam</td>
+                    <td>@game.AwayTeam</td>
+                    <td hidden="hidden">@game.IdAwayTeam</td>
+                    <td>@game.Result</td>
+                    <td>@game.Competition</td>
+                    <td hidden="hidden">@game.IdCompetition</td>
+
+                    <td><input type="button" id="btnEdit" name="btnEdit" value="Wijzigen" onclick="location.href='@Url.Action("EditUser", "User", new { idUser = 1 })'" class="btn btn-primary" /></td>
+                </tr>
+            }
+
+            </tbody>
+        </table>
+    }
+</div>

@@ -149,29 +149,38 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CalendarController.cs" />
+    <Compile Include="Controllers\GameManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LinksController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RankingController.cs" />
     <Compile Include="Controllers\UnderConstructionController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Core\FcDeHoekRuntimeManager.cs" />
     <Compile Include="Data\FcDeHoekContext.cs" />
     <Compile Include="Data\Helper\GameTotal.cs" />
     <Compile Include="Data\Queries\GameQueries.cs" />
     <Compile Include="Data\Queries\SeasonQueries.cs" />
     <Compile Include="Data\Queries\TeamQueries.cs" />
+    <Compile Include="Data\Queries\UserQueries.cs" />
     <Compile Include="Data\Tables\BaseDomain.cs" />
     <Compile Include="Data\Tables\Game.cs" />
     <Compile Include="Data\Tables\History.cs" />
+    <Compile Include="Data\Tables\Person.cs" />
     <Compile Include="Data\Tables\Season.cs" />
     <Compile Include="Data\Tables\Team.cs" />
+    <Compile Include="Data\Tables\User.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CalendarModel.cs" />
+    <Compile Include="Models\GameManagerModel.cs" />
     <Compile Include="Models\GameModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RankingModel.cs" />
     <Compile Include="Models\RankModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structs\eCompetitionType.cs" />
     <Compile Include="Structs\eEntry.cs" />
@@ -227,6 +236,10 @@
     <Content Include="Views\Calendar\Index.cshtml" />
     <Content Include="Views\UnderConstruction\Index.cshtml" />
     <Content Include="Views\Shared\_Sponsors.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Detail.cshtml" />
+    <Content Include="Views\GameManager\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
