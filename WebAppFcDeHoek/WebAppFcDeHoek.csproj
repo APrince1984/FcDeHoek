@@ -154,12 +154,15 @@
     <Compile Include="Controllers\LinksController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RankingController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\UnderConstructionController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\PersonManagerController.cs" />
     <Compile Include="Core\FcDeHoekRuntimeManager.cs" />
     <Compile Include="Data\FcDeHoekContext.cs" />
     <Compile Include="Data\Helper\GameTotal.cs" />
     <Compile Include="Data\Queries\GameQueries.cs" />
+    <Compile Include="Data\Queries\PersonQueries.cs" />
     <Compile Include="Data\Queries\SeasonQueries.cs" />
     <Compile Include="Data\Queries\TeamQueries.cs" />
     <Compile Include="Data\Queries\UserQueries.cs" />
@@ -178,6 +181,7 @@
     <Compile Include="Models\GameModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\RankingModel.cs" />
     <Compile Include="Models\RankModel.cs" />
     <Compile Include="Models\UserModel.cs" />
@@ -240,6 +244,10 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\Detail.cshtml" />
     <Content Include="Views\GameManager\Index.cshtml" />
+    <Content Include="Views\PersonManager\Index.cshtml" />
+    <Content Include="Views\PersonManager\Detail.cshtml" />
+    <Content Include="Views\Team\Board.cshtml" />
+    <Content Include="Views\Team\Players.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

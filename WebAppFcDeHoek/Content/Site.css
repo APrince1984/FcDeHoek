@@ -159,6 +159,15 @@
     max-height: 200px;
 }
 
+.personImage {
+    width: 120px;
+    height: 150px;
+    min-width: 60px;
+    min-height: 80px;
+    max-width: 120px;
+    max-height: 150px;
+}
+
 /* make table text size responsive*/
 
 @media (min-width: 1200px) {
@@ -246,10 +255,14 @@
         font-size: 100%;
     }
 
-    .sponsorImage {
+    .sponsorImage{
         height: 100%;
         width: 100%;
+    }
 
+    .personImage {
+        height: 150px;
+        width: 120px;
     }
 }
 
@@ -338,9 +351,14 @@
         font-size: 95%;
     }
 
-    .sponsorImage {
+    .sponsorImage{
         height: 100%;
         width: 100%;
+    }
+
+    .personImage {
+        height: 150px;
+        width: 120px;
     }
 
     .row-sponsorFooter > h1,
@@ -450,9 +468,15 @@
             font-size: 1.8em;
         }
 
-    .sponsorImage {
+    .sponsorImage
+    {
         height: 90%;
         width: 90%;
+    }
+
+    .personImage {
+        height: 140px;
+        width: 115px;
     }
 }
 
@@ -549,9 +573,14 @@
             font-size: 1.7em;
         }
 
-    .sponsorImage {
+    .sponsorImage{
         height: 85%;
         width: 85%;
+    }
+
+    .personImage {
+        height: 135px;
+        width: 110px;
     }
 }
 
@@ -650,17 +679,28 @@
         font-size: 65%;
     }
 
-    .sponsorImage {
+    .sponsorImage
+    {
         height: 80%;
         width: 80%;
+    }
+
+    .personImage {
+        height: 125px;
+        width: 100px;
     }
 }
 
 @media (max-width: 599px) {
-    .sponsorImage {
+    .sponsorImage{
         height: 70%;
         width: 70%;
-    }
+
+    }.personImage {
+         height: 105px;
+         width: 85px;
+     }
+
 }
 
 @media (min-width: 530px) and (max-width: 599px) {
@@ -1009,6 +1049,11 @@
     .sponsorImage {
         height: 80%;
         width: 80%;
+    }
+
+    .personImage {
+        height: 125px;
+        width: 100px;
     }
 }
 

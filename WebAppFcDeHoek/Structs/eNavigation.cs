@@ -23,6 +23,10 @@
         public const int ManageHistory = 13;
 
 
+        // team split
+        public const int Board = 20;
+        public const int Players = 21;
+
         public static string GetNavigationDescription(int navigation)
         {
             switch (navigation)
@@ -57,7 +61,10 @@
                     return "History";
                 case ManageSeasons:
                     return "Seasons";
-
+                case Board:
+                    return "Bestuur";
+                case Players:
+                    return "Spelers";
                 default:
                     return "Page Title Not found";
             }

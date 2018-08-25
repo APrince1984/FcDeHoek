@@ -1,0 +1,58 @@
+﻿@model List<WebAppFcDeHoek.Models.PersonModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>People</h2>
+
+@using (Html.BeginForm("EditPerson", "PersonManager", FormMethod.Post,
+    new {enctype = "multipart/form-data", @class = "form-group"}))
+{
+    <div>
+        <input type="button" id="btnAdd" name="btnAdd" value="Add" onclick="location.href = '@Url.Action("EditPerson", "PersonManager", new {idPerson = 0})'" class="btn btn-primary"/>
+    </div>
+}
+    @using (Html.BeginForm("EditPerson", "PersonManager", FormMethod.Get,
+        new { enctype = "multipart/form-data", @class = "form-group" }))
+    {
+        <table class="table table-bordered table-responsive table-hover">
+            <tbody>
+                <tr>
+                    <th class="TableTitle" hidden="hidden">ID</th>
+                    <th class="TableTitle">Name</th>
+                    <th class="TableTitle">FirstName</th>
+                    <th class="TableTitle">Perkez Number</th>
+                    <th class="TableTitle">Player</th>
+                    <th class="TableTitle">Staff</th>
+                    <th class="TableTitle">Foto</th>
+                    <th class="TableTitle">BirthDate</th>
+                    <th class="TableTitle">Phone nbr</th>
+                    <th class="TableTitle">Action</th>
+                </tr>
+
+                @foreach (var person in Model)
+                {
+                    <tr>
+                        <td hidden="hidden">@person.IdPerson</td>
+                        <td>@person.Name</td>
+                        <td>@person.FirstName</td>
+                        <td>@person.PerkezNumber</td>
+                        <td>@person.IsPlayer</td>
+                        <td>@person.IsStaff</td>
+                        <td>@person.Picture</td>
+                        <td>@person.BirthDate</td>
+                        <td>@person.PhoneNumber</td>
+                        
+
+                        <td><input type="button" id="btnEdit" name="btnEdit" value="Wijzigen" onclick="location.href = '@Url.Action("EditPerson", "PersonManager", new {idPerson = @person.IdPerson})'" class="btn btn-primary" /></td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    }
+
+

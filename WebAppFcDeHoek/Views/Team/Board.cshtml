@@ -1,0 +1,31 @@
+﻿@model List<WebAppFcDeHoek.Models.PersonModel>
+
+@{
+    ViewBag.Title = "Board";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bestuur</h2>
+
+@foreach (var person in Model)
+{   
+
+    <div class="col-sm-4 col-md-4">
+        <table class="table table-bordered table-responsive table-hover">
+            <tbody>
+            <tr>
+                <td class="col-sm-3 col-md-3"><img class="personImage" src=@person.Picture alt="Can't load Image'" /></td>
+                <td class="col-sm-4 col-md-4">
+                    <div class="col-sm-10 col-md-10">
+                        @Html.Label(person.PerkezNumber.ToString())
+                    </div>
+                    <div class="col-sm-10 col-md-10">
+                        @Html.Label(person.Name)
+                        @Html.Label(person.FirstName)
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+}

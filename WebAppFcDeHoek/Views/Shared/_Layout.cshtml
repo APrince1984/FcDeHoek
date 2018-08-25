@@ -26,7 +26,13 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Home), "Index", "Home")</li>
-                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Team), "Index", "UnderConstruction")</li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="False">@eNavigation.GetNavigationDescription(eNavigation.Team)<span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Board), "Board", "Team")</li>
+                        <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Players), "Players", "Team")</li>
+                    </ul>
+                </li>
                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Calendar), "Index", "Calendar")</li>
                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Ranking), "Index", "Ranking")</li>
                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.History), "Index", "UnderConstruction")</li>
