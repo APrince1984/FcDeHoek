@@ -8,7 +8,14 @@
 <h2>Games</h2>
 
 <div class="container">
-
+    
+    @using (Html.BeginForm("EditGame", "GameManager", FormMethod.Post,
+        new {enctype = "multipart/form-data", @class = "form-group"}))
+    {
+        <div>
+            <input type="button" id="btnAdd" name="btnAdd" value="Add" onclick="location.href = '@Url.Action("EditGame", "GameManager", new {idGame = 0})'" class="btn btn-primary"/>
+        </div>
+    }
     @using (Html.BeginForm("Index", "GameManager", FormMethod.Post,
         new { enctype = "multipart/form-data", @class = "form-group" }))
     {
@@ -49,7 +56,7 @@
                     <td>@game.Competition</td>
                     <td hidden="hidden">@game.IdCompetition</td>
 
-                    <td><input type="button" id="btnEdit" name="btnEdit" value="Wijzigen" onclick="location.href='@Url.Action("EditUser", "User", new { idUser = 1 })'" class="btn btn-primary" /></td>
+                    <td><input type="button" id="btnEdit" name="btnEdit" value="Wijzigen" onclick="location.href='@Url.Action("EditGame", "GameManager", new { idGame = @game.IdGame })'" class="btn btn-primary" /></td>
                 </tr>
             }
 

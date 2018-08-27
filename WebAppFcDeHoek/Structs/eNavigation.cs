@@ -27,6 +27,10 @@
         public const int Board = 20;
         public const int Players = 21;
 
+        // calendar split
+        public const int GamesDeHoek = 30;
+        public const int AllGames = 31;
+
         public static string GetNavigationDescription(int navigation)
         {
             switch (navigation)
@@ -65,6 +69,10 @@
                     return "Bestuur";
                 case Players:
                     return "Spelers";
+                case GamesDeHoek:
+                    return "Games De Hoek";
+                case AllGames:
+                    return "Full Calendar";
                 default:
                     return "Page Title Not found";
             }

@@ -1,0 +1,64 @@
+﻿@model WebAppFcDeHoek.Models.GameManagerModel
+
+@{
+    /**/
+
+    /**/
+
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+@using (Html.BeginForm("Save", "GameManager", FormMethod.Post,
+    new {enctype = "multipart/form-data", @class = "form-group"}))
+{
+     if (Model.Games.Any())
+     {
+         <div hidden="hidden">@Html.TextBoxFor(n => n.Games[0].IdGame, new {@hidden = "hidden"})</div>
+         <div class="form-group row">
+             @Html.Label("Thuis ploeg: ", new {@class = "col-sm-2 col-md-2"})
+             @Html.DropDownListFor(n => n.Games[0].IdHomeTeam, new SelectList(Model.Teams, "IdTeam", "Name", Model.Games[0].IdHomeTeam), new {@class = "col-sm-4 col-md-4 form-control"})
+         </div>
+
+         <div class="form-group row">
+             @Html.Label("Uit ploeg: ", new {@class = "col-sm-2 col-md-2"})
+             @Html.DropDownListFor(n => n.Games[0].IdAwayTeam, new SelectList(Model.Teams, "IdTeam", "Name", Model.Games[0].IdAwayTeam), new {@class = "col-sm-4 col-md-4 form-control"})
+         </div>
+
+         <div class="form-group row">
+             @Html.Label("Datum: ", new {@class = "col-sm-2 col-md-2"})
+             @Html.TextBoxFor(model => model.Games[0].MatchDay, new {@class = "col-sm-4 col-md-4 form-control"})
+         </div>
+
+         <div class="form-group row">
+             @Html.Label("Doelpunten thuisploeg: ", new {@class = "col-sm-2 col-md-2"})
+             @Html.TextBoxFor(model => model.Games[0].GoalsHomeTeam, new {@class = "col-sm-4 col-md-4 form-control"})
+         </div>
+
+         <div class="form-group row">
+             @Html.Label("Doelpunten uitploeg: ", new {@class = "col-sm-2 col-md-2"})
+             @Html.TextBoxFor(model => model.Games[0].GoalsAwayTeam, new {@class = "col-sm-4 col-md-4 form-control"})
+         </div>
+
+         <div class="form-group row">
+             @Html.Label("Uitgesteld: ", new {@class = "col-sm-2 col-md-2"})
+             @Html.CheckBoxFor(model => model.Games[0].IsPostPoned, new {@class = "col-sm-4 col-md-4"})
+         </div>
+
+         <div class="form-group row">
+             @Html.Label("Forfait: ", new {@class = "col-sm-2 col-md-2"})
+             @Html.CheckBoxFor(model => model.Games[0].Forfait, new {@class = "col-sm-4 col-md-4"})
+         </div>
+
+         <div class="form-group row">
+             @Html.Label("Thuis ploeg: ", new {@class = "col-sm-2 col-md-2"})
+             @Html.DropDownListFor(n => n.Games[0].IdCompetition, new SelectList(Model.CompetitionTypes, "IdCompetition", "Description", Model.Games[0].IdCompetition), new {@class = "col-sm-4 col-md-4 form-control"})
+         </div>
+
+         <div class="form-group row">
+             <input type="submit" id="btnSave" name="btnSave" value="Save" class="btn btn-primary" />
+         </div>
+     }
+}
+

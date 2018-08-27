@@ -173,10 +173,12 @@
     <Compile Include="Data\Tables\Season.cs" />
     <Compile Include="Data\Tables\Team.cs" />
     <Compile Include="Data\Tables\User.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CalendarModel.cs" />
+    <Compile Include="Models\FullCalendarModel.cs" />
     <Compile Include="Models\GameManagerModel.cs" />
     <Compile Include="Models\GameModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
@@ -248,6 +250,9 @@
     <Content Include="Views\PersonManager\Detail.cshtml" />
     <Content Include="Views\Team\Board.cshtml" />
     <Content Include="Views\Team\Players.cshtml" />
+    <Content Include="Views\GameManager\Detail.cshtml" />
+    <Content Include="Views\Calendar\AllGames.cshtml" />
+    <Content Include="Views\GameManager\AddMultipleGames.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

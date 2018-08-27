@@ -6,6 +6,11 @@ namespace WebAppFcDeHoek.Data.Queries
 {
     public static class GameQueries
     {
+        public static Game GetById(FcDeHoekContext context, int idGame)
+        {
+            return context.Games.FirstOrDefault(g => g.IdGame == idGame);
+        }
+
         public static IQueryable<Game> GetAllGamesBetweenDates(FcDeHoekContext context, DateTime startDate,
             DateTime endDate)
         {
@@ -38,9 +43,18 @@ namespace WebAppFcDeHoek.Data.Queries
             return GetAllGamesByIdTeam(context, 1).OrderBy(g => g.MatchDate).FirstOrDefault(g => g.MatchDate > DateTime.Now);
         }
 
+        public static IQueryable<Game> GetNextGames(FcDeHoekContext context)
+        {
+            var gameFcDeHoek = GetNextGame(context);
+            if (gameFcDeHoek == null)
+                return null;
+
+            return context.Games.Where(g => g.MatchDate == gameFcDeHoek.MatchDate);
+        }
+
         public static Game GetPreviousGame(FcDeHoekContext context)
         {
-            return GetAllGamesByIdTeam(context, 1).OrderBy(g => g.MatchDate).FirstOrDefault(g => g.MatchDate <= DateTime.Now);
+            return GetAllGamesByIdTeam(context, 1).OrderByDescending(g => g.MatchDate).FirstOrDefault(g => g.MatchDate <= DateTime.Now);
         }
     }
 }
