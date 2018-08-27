@@ -1,0 +1,54 @@
+﻿@model WebAppFcDeHoek.Models.ScoreModel
+
+@{
+    ViewBag.Title = "EditScores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Scores Aanpassen</h2>
+
+@using (Html.BeginForm("EditScores", "Score", FormMethod.Post,
+    new {enctype = "multipart/form-data", @class = "form-group"}))
+{
+      <div class="form-group row">
+            @Html.DropDownListFor(n => n.FixtureDate, new SelectList(Model.AllFixtureDates, "Date", "Date", Model.FixtureDate), new { @OnChange = "this.form.submit();", @class = "col-sm-4 col-md-4 form-control" })
+        </div>
+}
+
+    @using (Html.BeginForm("Save", "Score", FormMethod.Post,
+        new { enctype = "multipart/form-data", @class = "form-group" }))
+    {
+        <div hidden="hidden">
+            @Html.TextBoxFor(m => m.FixtureDate)
+        </div>
+        <div class="form-group row">
+            <table>
+                <tbody>
+                    <tr>
+                        <th hidden="hidden">ID</th>
+                        <th>Thuisploeg</th>
+                        <th>Uitploeg</th>
+                        <th>Doelptn thuis</th>
+                        <th>Doelptn uit</th>
+                    </tr>
+
+
+                    @for (var i = 0; i < Model.Games.Count; i++)
+                    {
+                        <tr>
+                            <td hidden="hidden">@Html.TextBox("Games[" + i + "].IdGame", Model.Games[i].IdGame)</td>
+                            <td>@Html.Label(Model.Games[i].HomeTeam)</td>
+                            <td>@Html.Label(Model.Games[i].AwayTeam)</td>
+                            <td class="col-sm-1 col-md-1">@Html.TextBox("Games[" + i + "].GoalsHomeTeam", Model.Games[i].GoalsHomeTeam)</td>
+                            <td class="col-sm-1 col-md-1">@Html.TextBox("Games[" + i + "].GoalsAwayTeam", Model.Games[i].GoalsAwayTeam)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-group row">
+            <input type="submit" id="btnSave" name="btnSave" value="Save" class="btn btn-primary" />
+        </div>
+
+    }

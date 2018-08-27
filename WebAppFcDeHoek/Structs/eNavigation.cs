@@ -21,6 +21,7 @@
         public const int ManageScores = 11;
         public const int ManageSeasons = 12;
         public const int ManageHistory = 13;
+        public const int ManagePersons = 14;
 
 
         // team split
@@ -30,6 +31,9 @@
         // calendar split
         public const int GamesDeHoek = 30;
         public const int AllGames = 31;
+
+        // scores 
+        public const int EditScores = 40;
 
         public static string GetNavigationDescription(int navigation)
         {
@@ -73,6 +77,10 @@
                     return "Games De Hoek";
                 case AllGames:
                     return "Full Calendar";
+                case EditScores:
+                    return "Scores";
+                case ManagePersons:
+                    return "Persons";
                 default:
                     return "Page Title Not found";
             }
