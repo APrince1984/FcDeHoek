@@ -14,15 +14,23 @@
         <table class="table table-bordered table-responsive table-hover">
             <tbody>
             <tr>
-                <td class="col-sm-3 col-md-3"><img class="personImage" src=@person.Picture alt="Can't load Image'" /></td>
-                <td class="col-sm-4 col-md-4">
-                    <div class="col-sm-10 col-md-10">
-                        @Html.Label(person.PerkezNumber.ToString())
-                    </div>
-                    <div class="col-sm-10 col-md-10">
-                        @Html.Label(person.Name)
-                        @Html.Label(person.FirstName)
-                    </div>
+                <td>
+                    <table style="border: none; border-top: none; border-color: transparent">
+                        <tbody style="border: none; border-color:transparent">
+                        <tr style="border: none; border-top: none">
+                            <td style="border: none; border-color: transparent"><img class="personImage" src=@person.Picture alt="Can't load Image'" /></td>
+                            <td style="border: none; border-color: transparent">
+                                <div class="row">
+                                    @Html.Label(person.PerkezNumber.ToString())
+                                </div>
+                                <div class="row">
+                                    @Html.Label(person.Name)
+                                    @Html.Label(person.FirstName)
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </td>
             </tr>
             </tbody>

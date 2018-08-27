@@ -160,12 +160,12 @@
 }
 
 .personImage {
-    width: 120px;
-    height: 150px;
-    min-width: 60px;
-    min-height: 80px;
-    max-width: 120px;
-    max-height: 150px;
+    width: 90px;
+    height: 120px;
+    min-width: 90px;
+    min-height: 120px;
+    max-width: 90px;
+    max-height: 120px;
 }
 
 /* make table text size responsive*/
@@ -260,10 +260,7 @@
         width: 100%;
     }
 
-    .personImage {
-        height: 150px;
-        width: 120px;
-    }
+   
 }
 
 @media (min-width: 938px) and (max-width: 1199px) {
@@ -356,10 +353,7 @@
         width: 100%;
     }
 
-    .personImage {
-        height: 150px;
-        width: 120px;
-    }
+   
 
     .row-sponsorFooter > h1,
     .row-sponsorFooter > h2,
@@ -474,10 +468,7 @@
         width: 90%;
     }
 
-    .personImage {
-        height: 140px;
-        width: 115px;
-    }
+    
 }
 
 @media (min-width: 650px) and (max-width: 755px) {
@@ -578,10 +569,7 @@
         width: 85%;
     }
 
-    .personImage {
-        height: 135px;
-        width: 110px;
-    }
+    
 }
 
 @media (max-width: 649px) {
@@ -685,21 +673,15 @@
         width: 80%;
     }
 
-    .personImage {
-        height: 125px;
-        width: 100px;
-    }
+    
 }
 
 @media (max-width: 599px) {
-    .sponsorImage{
+    .sponsorImage {
         height: 70%;
         width: 70%;
-
-    }.personImage {
-         height: 105px;
-         width: 85px;
-     }
+    }
+   
 
 }
 
@@ -1051,10 +1033,7 @@
         width: 80%;
     }
 
-    .personImage {
-        height: 125px;
-        width: 100px;
-    }
+   
 }
 
 

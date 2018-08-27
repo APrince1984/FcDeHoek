@@ -66,9 +66,9 @@
                 case ManageSeasons:
                     return "Seasons";
                 case Board:
-                    return "Bestuur";
+                    return "Board";
                 case Players:
-                    return "Spelers";
+                    return "Players";
                 case GamesDeHoek:
                     return "Games De Hoek";
                 case AllGames:
