@@ -71,31 +71,48 @@
     margin: auto;
 }
 
-
-/* set table title Row */
-
-.table > thead > tr > td.TableTitle,
-.table > tbody > tr > td.TableTitle,
-.table > tfoot > tr > td.TableTitle,
-.table > thead > tr > th.TableTitle,
-.table > tbody > tr > th.TableTitle,
-.table > tfoot > tr > th.TableTitle,
-.table > thead > tr.TableTitle > td,
-.table > tbody > tr.TableTitle > td,
-.table > tfoot > tr.TableTitle > td,
-.table > thead > tr.TableTitle > th,
-.table > tbody > tr.TableTitle > th,
-.table > tfoot > tr.TableTitle > th {
-    background-color: blue;
-    color: #ffffff;
+.row-floatRight {
+    margin-right: -5px;
+    margin-left: -15px;
+    float: right;
 }
+
+    .row-floatRight:before,
+    .row-floatRight:after {
+        display: table;
+        content: " ";
+        float: right;
+    }
+
+    .row-floatRight:after {
+        clear: both;
+    }
+
+    .row-floatRight:before,
+    .row-floatRight:after {
+        display: table;
+        content: " ";
+        float: right;
+    }
+
+    .row-floatRight:after {
+        clear: both;
+    }
+
+
+
+    /* set table title Row */
+    .table > thead > tr > td.TableTitle, .table > tbody > tr > td.TableTitle, .table > tfoot > tr > td.TableTitle, .table > thead > tr > th.TableTitle, .table > tbody > tr > th.TableTitle, .table > tfoot > tr > th.TableTitle, .table > thead > tr.TableTitle > td, .table > tbody > tr.TableTitle > td, .table > tfoot > tr.TableTitle > td, .table > thead > tr.TableTitle > th, .table > tbody > tr.TableTitle > th, .table > tfoot > tr.TableTitle > th {
+        background-color: black;
+        color: #ffffff;
+    }
 
 .table-hover > tbody > tr > td.TableTitle:hover,
 .table-hover > tbody > tr > th.TableTitle:hover,
 .table-hover > tbody > tr.TableTitle:hover > td {
     background-color: #ebcccc;
     border-color: #e6c1c7;
-    text-align: center;
+    
 }
 
 /* end of table title Row */

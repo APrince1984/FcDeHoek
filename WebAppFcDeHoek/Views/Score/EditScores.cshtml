@@ -22,7 +22,7 @@
             @Html.TextBoxFor(m => m.FixtureDate)
         </div>
         <div class="form-group row">
-            <table>
+            <table class="table table-bordered table-responsive table-hover"> 
                 <tbody>
                     <tr>
                         <th hidden="hidden">ID</th>
@@ -35,13 +35,13 @@
 
                     @for (var i = 0; i < Model.Games.Count; i++)
                     {
-                        <tr>
-                            <td hidden="hidden">@Html.TextBox("Games[" + i + "].IdGame", Model.Games[i].IdGame)</td>
-                            <td>@Html.Label(Model.Games[i].HomeTeam)</td>
-                            <td>@Html.Label(Model.Games[i].AwayTeam)</td>
-                            <td class="col-sm-1 col-md-1">@Html.TextBox("Games[" + i + "].GoalsHomeTeam", Model.Games[i].GoalsHomeTeam)</td>
-                            <td class="col-sm-1 col-md-1">@Html.TextBox("Games[" + i + "].GoalsAwayTeam", Model.Games[i].GoalsAwayTeam)</td>
-                        </tr>
+                    <tr>
+                        <td hidden="hidden">@Html.TextBox("Games[" + i + "].IdGame", Model.Games[i].IdGame)</td>
+                        <td>@Html.Label(Model.Games[i].HomeTeam)</td>
+                        <td>@Html.Label(Model.Games[i].AwayTeam)</td>
+                        <td class="col-sm-1 col-md-1">@Html.TextBoxFor(m => m.Games.First(g => g.IdGame == Model.Games[i].IdGame).GoalsHomeTeam, new { @class = "form-control", @id = "Games[" + i + "].GoalsHomeTeam", @Name = "Games[" + i + "].GoalsHomeTeam" })</td>
+                        <td class="col-sm-1 col-md-1">@Html.TextBoxFor(m => m.Games.First(g => g.IdGame == Model.Games[i].IdGame).GoalsAwayTeam, new { @class = "form-control", @id = "Games[" + i + "].GoalsAwayTeam", @Name = "Games[" + i + "].GoalsAwayTeam" })</td>
+                    </tr>
                     }
                 </tbody>
             </table>

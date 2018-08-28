@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 
 namespace WebAppFcDeHoek.Models
 {
@@ -14,6 +15,8 @@ namespace WebAppFcDeHoek.Models
         public string Picture { get; set; }
         public DateTime? BirthDate { get; set; }
         public int? PhoneNumber { get; set; }
+
+        public StatisticsModel Stats { get; set; }
         
     }
 }
