@@ -22,7 +22,7 @@
         public const int ManageSeasons = 12;
         public const int ManageHistory = 13;
         public const int ManagePersons = 14;
-
+        public const int EditFcDeHoekGame = 15;
 
         // team split
         public const int Board = 20;

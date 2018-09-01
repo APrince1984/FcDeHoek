@@ -34,5 +34,8 @@ namespace WebAppFcDeHoek.Data.Tables
 
         [Column("PhoneNumber")]
         public virtual int? PhoneNumber { get; set; }
+
+        [Column("Function")]
+        public virtual int? Function { get; set; }
     }
 }

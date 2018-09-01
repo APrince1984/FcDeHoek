@@ -1,0 +1,106 @@
+﻿@model WebAppFcDeHoek.Models.FcDeHoekGameModel
+
+@{
+    ViewBag.Title = "FcDeHoekGameDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Wedstrijd Fc De Hoek</h2>
+
+@using (Html.BeginForm("FcDeHoekGameDetail", "FcDeHoekGame", FormMethod.Post,
+    new {enctype = "multipart/form-data", @class = "form-group"}))
+{
+    <div class="container">
+        <div class="form-group row">
+            @Html.DropDownListFor(n => n.IdGame, new SelectList(Model.AllGames, "IdGame", "GameFixture", Model.IdGame), new {@OnChange = "this.form.submit();", @class = "col-sm-10 col-md-10 form-control"})
+        </div>
+    </div>
+}
+    @using (Html.BeginForm("SaveFcDeHoekGame", "FcDeHoekGame", FormMethod.Post,
+         new {enctype = "multipart/form-data", @class = "form-group"}))
+     {
+         <div class="hidden">
+             @Html.TextBoxFor(m => m.IdGame)
+         </div>
+    <div class="container">
+        <div class="form-group row">
+            <div class="col-sm-2 col-md-2">
+                @Html.Label("Uitslag:")
+            </div>
+        <div class="col-sm-2 col-md-2">
+            @Html.TextBoxFor(m => m.GoalsHome, new { @class = "form-control col-sm-1 col-md-1" })
+        </div>
+        <div class="col-sm-1 col-md-1">
+            @Html.Label("-")
+        </div>
+            <div class="col-sm-2 col-md-2">
+                @Html.TextBoxFor(m => m.GoalsAway, new { @class = "form-control col-sm-1 col-md-1" })
+            </div>
+         </div>
+
+                    @for (var i = 0; i < 15; i++)
+                    {
+                        if (Model.PlayersInGame.Any() && Model.PlayersInGame.Count > i  && Model.PlayersInGame[i] != null)
+                        {
+                                <div class="row">
+                                    <div class="form-group col-sm-4 col-md-4">
+                                        <div  class="col-sm-3 col-md-3">
+                                            @Html.Label("Speler: ")
+                                        </div>
+                                        @Html.DropDownListFor(n => n.PlayersInGame[i].IdPlayer, new SelectList(Model.AllPlayers, "IdPlayer", "PlayerFullName", Model.PlayersInGame[i].IdPlayer), new {@class = "col-sm-4 col-md-4 form-control", @id = "PlayersInGame[" + i + "].IdPlayer", @Name = "PlayersInGame[" + i + "].IdPlayer"})
+                                    </div>
+                                    <div class="col-sm-4 col-md-4">
+                                        <div class="col-sm-3 col-md-3">
+                                            @Html.Label("Goals: ")
+                                        </div>
+                                        
+                                        @Html.TextBoxFor(m => m.PlayersInGame[i].GoalsScored, new {@class = "form-control col-sm-5 col-md-5", @id = "PlayersInGame[" + i + "].GoalsScored", @Name = "PlayersInGame[" + i + "].GoalsScored"})
+                                        
+                                    </div>
+                                    <div class="col-sm-4 col-md-4">
+                                        <div  class="col-sm-3 col-md-3">
+                                            @Html.Label("Assists: ")
+                                        </div>
+                                        
+                                            @Html.TextBoxFor(m => m.PlayersInGame[i].AssistsGiven, new { @class = "form-control col-sm-5 col-md-5", @id = "PlayersInGame[" + i + "].AssistsGiven", @Name = "PlayersInGame[" + i + "].AssistsGiven" })
+                                        
+                </div>
+                                </div>
+                        }
+                        else
+                        {
+                                <div class="row">
+                                    <div class="form-group col-sm-4 col-md-4">
+                                        <div  class="col-sm-3 col-md-3">
+                                        @Html.Label("Speler: ")
+                                    </div>
+                                        @Html.DropDownListFor(n => n.PlayersInGame[0].IdPlayer, new SelectList(Model.AllPlayers, "IdPlayer", "PlayerFullName", Model.PlayersInGame[0].IdPlayer), new {@class = "col-sm-4 col-md-4 form-control", @id = "PlayersInGame[" + i + "].IdPlayer", @Name = "PlayersInGame[" + i + "].IdPlayer"})
+                                    </div>
+                                    <div class="col-sm-4 col-md-4">
+                                        <div  class="col-sm-3 col-md-3">
+                                            @Html.Label("Goals: ")
+                                        </div>
+                                        
+                                            @Html.TextBoxFor(m => m.PlayersInGame[0].GoalsScored, new { @class = "form-control col-sm-5 col-md-5", @id = "PlayersInGame[" + i + "].GoalsScored", @Name = "PlayersInGame[" + i + "].GoalsScored" })
+                                        
+                                    </div>
+                                    <div class="col-sm-4 col-md-4">
+                                        <div  class="col-sm-3 col-md-3">
+                                            @Html.Label("Assists: ")
+                                        </div>
+                                        
+                                            @Html.TextBoxFor(m => m.PlayersInGame[0].AssistsGiven, new { @class = "form-control col-sm-5 col-md-5", @id = "PlayersInGame[" + i + "].AssistsGiven", @Name = "PlayersInGame[" + i + "].AssistsGiven" })
+                                        
+                                        </div>
+                                    </div>
+                        }
+                    }
+                    <div class="form-group row">
+                        <input type="submit" id="btnSave" name="btnSave" value="Save" class="btn btn-primary" />
+                    </div>
+                </div>
+     }
+
+
+
+

@@ -17,6 +17,8 @@ namespace WebAppFcDeHoek.Models
         public int? PhoneNumber { get; set; }
 
         public StatisticsModel Stats { get; set; }
+        public int Function { get; set; }
+        public string FunctionDescription { get; set; }
         
     }
 }

@@ -54,7 +54,8 @@ namespace WebAppFcDeHoek.Controllers
                 PhoneNumber = person.PhoneNumber,
                 PerkezNumber = person.PerkezNumber,
                 Picture = picture,
-                Stats = person.IsPlayer ? GetPlayerStats(context, person.IdPerson) : null
+                Stats = person.IsPlayer ? GetPlayerStats(context, person.IdPerson) : null,
+                Function = person.Function ?? eFunction.Player
             };
         }
 

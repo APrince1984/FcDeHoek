@@ -1,4 +1,5 @@
-﻿@model List<WebAppFcDeHoek.Models.PersonModel>
+﻿@using WebAppFcDeHoek.Structs
+@model List<WebAppFcDeHoek.Models.PersonModel>
 
 @{
     ViewBag.Title = "Board";
@@ -7,33 +8,143 @@
 
 <h2>Bestuur</h2>
 
-@foreach (var person in Model)
-{   
+<div class="container">
 
-    <div class="col-sm-4 col-md-4">
-        <table class="table table-bordered table-responsive table-hover">
-            <tbody>
-            <tr>
-                <td>
-                    <table style="border: none; border-top: none; border-color: transparent">
-                        <tbody style="border: none; border-color:transparent">
-                        <tr style="border: none; border-top: none">
-                            <td style="border: none; border-color: transparent"><img class="personImage" src=@person.Picture alt="Can't load Image'" /></td>
-                            <td style="border: none; border-color: transparent">
-                                <div class="row">
-                                    @Html.Label(person.PerkezNumber.ToString())
-                                </div>
-                                <div class="row">
-                                    @Html.Label(person.Name)
-                                    @Html.Label(person.FirstName)
-                                </div>
+    @if (Model.Any())
+    {
+        var person = Model.FirstOrDefault(p => p.Function == eFunction.Voorzitter);
+        <div class="col-sm-4 col-md-4">
+            <table class="table table-bordered table-responsive table-hover">
+                <tbody>
+                    <tr>
+                        <td>
+                            <table style="border: none; border-top: none; border-color: transparent">
+                                <tbody style="border: none; border-color: transparent">
+                                    <tr style="border: none; border-top: none">
+                                        <td style="border: none; border-color: transparent"><img class="personImage" src=@person.Picture alt="Can't load Image'" /></td>
+                                        <td style="border: none; border-color: transparent">
+                                            <div class="row">
+                                                @Html.Label(eFunction.GetFunctionDescription(person.Function))
+                                            </div>
+                                            <div class="row">
+                                                @Html.Label(person.PerkezNumber.ToString())
+                                            </div>
+                                            <div class="row">
+                                                @Html.Label(person.Name)
+                                                @Html.Label(person.FirstName)
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        person = Model.FirstOrDefault(p => p.Function == eFunction.PenningMeester);
+        <div class="col-sm-4 col-md-4">
+            <table class="table table-bordered table-responsive table-hover">
+                <tbody>
+                <tr>
+                    <td>
+                        <table style="border: none; border-top: none; border-color: transparent">
+                            <tbody style="border: none; border-color: transparent">
+                            <tr style="border: none; border-top: none">
+                                <td style="border: none; border-color: transparent"><img class="personImage" src=@person.Picture alt="Can't load Image'" /></td>
+                                <td style="border: none; border-color: transparent">
+                                    <div class="row">
+                                        @Html.Label(eFunction.GetFunctionDescription(person.Function))
+                                    </div>
+                                    <div class="row">
+                                        @Html.Label(person.PerkezNumber.ToString())
+                                    </div>
+                                    <div class="row">
+                                        @Html.Label(person.Name)
+                                        @Html.Label(person.FirstName)
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        person = Model.FirstOrDefault(p => p.Function == eFunction.EventManager);
+        <div class="col-sm-4 col-md-4">
+            <table class="table table-bordered table-responsive table-hover">
+                <tbody>
+                <tr>
+                    <td>
+                        <table style="border: none; border-top: none; border-color: transparent">
+                            <tbody style="border: none; border-color: transparent">
+                            <tr style="border: none; border-top: none">
+                                <td style="border: none; border-color: transparent"><img class="personImage" src=@person.Picture alt="Can't load Image'" /></td>
+                                <td style="border: none; border-color: transparent">
+                                    <div class="row">
+                                        @Html.Label(eFunction.GetFunctionDescription(person.Function))
+                                    </div>
+                                    <div class="row">
+                                        @Html.Label(person.PerkezNumber.ToString())
+                                    </div>
+                                    <div class="row">
+                                        @Html.Label(person.Name)
+                                        @Html.Label(person.FirstName)
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    }
+</div>
+<div class="container">
+
+    @foreach (var person in Model)
+    {
+        if (person.Function == eFunction.Delege)
+        {
+            <div class="col-sm-4 col-md-4">
+                <table class="table table-bordered table-responsive table-hover">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table style="border: none; border-top: none; border-color: transparent">
+                                    <tbody style="border: none; border-color:transparent">
+                                        <tr style="border: none; border-top: none">
+                                            <td style="border: none; border-color: transparent"><img class="personImage" src=@person.Picture alt="Can't load Image'" /></td>
+                                            <td style="border: none; border-color: transparent">
+                                                <div class="row">
+                                                    @Html.Label(eFunction.GetFunctionDescription(person.Function))
+                                                </div>
+                                                <div class="row">
+                                                    @Html.Label(person.PerkezNumber.ToString())
+                                                </div>
+                                                <div class="row">
+                                                    @Html.Label(person.Name)
+                                                    @Html.Label(person.FirstName)
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </td>
                         </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-}
+                    </tbody>
+                </table>
+            </div>
+        }
+
+
+    }
+
+</div>

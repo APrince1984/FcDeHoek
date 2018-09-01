@@ -9,5 +9,10 @@ namespace WebAppFcDeHoek.Data.Queries
         {
             return context.PersonStatistics.Where(ps => ps.IdPerson == idPerson);
         }
+
+        public static PersonStats GetByIdPersonAndIdGame(FcDeHoekContext context, int idPerson, int idGame)
+        {
+            return context.PersonStatistics.FirstOrDefault(ps => ps.IdPerson == idPerson && ps.IdGame == idGame);
+        }
     }
 }

@@ -56,6 +56,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="False">@eNavigation.GetNavigationDescription(eNavigation.Editor)<span class="caret"></span></a>
                             <ul role="menu" class="dropdown-menu">
+                                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.EditFcDeHoekGame), "FcDeHoekGameDetail", "FcDeHoekGame")</li>
                                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManagePersons), "Index", "PersonManager")</li>
                                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageUsers), "Index", "User")</li>
                                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageGames), "Index", "GameManager")</li>

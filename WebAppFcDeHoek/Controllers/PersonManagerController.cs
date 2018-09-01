@@ -8,6 +8,7 @@ using WebAppFcDeHoek.Data;
 using WebAppFcDeHoek.Data.Queries;
 using WebAppFcDeHoek.Data.Tables;
 using WebAppFcDeHoek.Models;
+using WebAppFcDeHoek.Structs;
 
 namespace WebAppFcDeHoek.Controllers
 {
@@ -37,7 +38,9 @@ namespace WebAppFcDeHoek.Controllers
                     Name = person.Name,
                     PerkezNumber = person.PerkezNumber,
                     PhoneNumber = person.PhoneNumber,
-                    Picture = person.PicturePath
+                    Picture = person.PicturePath,
+                    Function = person.Function ?? eFunction.Player,
+                    FunctionDescription = eFunction.GetFunctionDescription(person.Function ?? eFunction.Player)
                 };
                 return View("Detail", personModel);
             }
@@ -61,6 +64,7 @@ namespace WebAppFcDeHoek.Controllers
                 person.PerkezNumber = model.PerkezNumber;
                 person.PhoneNumber = model.PhoneNumber;
                 person.PicturePath = model.Picture;
+                person.Function = model.Function;
 
                 context.Persons.AddOrUpdate(person);
                 context.SaveChanges();
@@ -87,7 +91,9 @@ namespace WebAppFcDeHoek.Controllers
                         PerkezNumber = person.PerkezNumber,
                         Picture = person.PicturePath,
                         BirthDate = person.BirthDate,
-                        PhoneNumber = person.PhoneNumber
+                        PhoneNumber = person.PhoneNumber,
+                        Function = person.Function ?? eFunction.Player,
+                        FunctionDescription = eFunction.GetFunctionDescription(person.Function ?? eFunction.Player)
                     });
                 }
 
