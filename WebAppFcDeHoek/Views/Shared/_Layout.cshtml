@@ -31,6 +31,7 @@
                     <ul role="menu" class="dropdown-menu">
                         <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Board), "Board", "Team")</li>
                         <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Players), "Players", "Team")</li>
+                        <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.Records), "Index", "Records")</li>
                     </ul>
                 </li>
                 
@@ -61,9 +62,10 @@
                                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageUsers), "Index", "User")</li>
                                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageGames), "Index", "GameManager")</li>
                                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageTeams), "Index", "UnderConstruction")</li>
-                                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageSeasons), "Index", "UnderConstruction")</li>
+                                <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageSeasons), "Index", "Season")</li>
                                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.ManageHistory), "Index", "UnderConstruction")</li>
                                 <li>@Html.ActionLink(@eNavigation.GetNavigationDescription(eNavigation.EditScores), "EditScores", "Score")</li>
+                                <li>@Html.ActionLink("HistoricStats", "Index", "HistoricStats")</li>
                             </ul>
                         </li>
                     }

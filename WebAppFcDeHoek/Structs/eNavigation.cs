@@ -27,6 +27,7 @@
         // team split
         public const int Board = 20;
         public const int Players = 21;
+        public const int Records = 22;
 
         // calendar split
         public const int GamesDeHoek = 30;
@@ -81,6 +82,10 @@
                     return "Scores";
                 case ManagePersons:
                     return "Persons";
+                case Records:
+                    return "Records";
+                case EditFcDeHoekGame:
+                    return "Edit Game De Hoek";
                 default:
                     return "Page Title Not found";
             }

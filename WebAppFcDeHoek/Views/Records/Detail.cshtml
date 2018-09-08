@@ -1,0 +1,27 @@
+﻿@model Dictionary<string,List<WebAppFcDeHoek.Models.RecordsPlayer>>
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.FirstOrDefault().Key</h2>
+
+<table class="table table-bordered table-responsive table-hover">
+    <tbody>
+    <tr>
+        <th class="TableTitle">Speler</th>
+        <th class="TableTitle">Aantal</th>
+    </tr>
+
+    @foreach (var playerData in Model.FirstOrDefault().Value)
+    {
+        <tr>
+            <td>@playerData.Player</td>
+            <td>@playerData.Stat</td>
+        </tr>
+    }
+
+    </tbody>
+</table>
+

@@ -1,0 +1,48 @@
+﻿@model List<WebAppFcDeHoek.Models.SeasonModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Manage Seasons</h2>
+
+@using (Html.BeginForm("SeasonDetail", "Season", FormMethod.Post,
+    new { enctype = "multipart/form-data", @class = "form-group" }))
+{
+    <div>
+        <input type="button" id="btnAdd" name="btnAdd" value="Add" onclick="location.href = '@Url.Action("SeasonDetail", "Season", new {idSeason = 0})'" class="btn btn-primary" />
+    </div>
+}
+@using (Html.BeginForm("SeasonDetail", "Season", FormMethod.Get,
+    new { enctype = "multipart/form-data", @class = "form-group" }))
+{
+    <table class="table table-bordered table-responsive table-hover">
+        <tbody>
+            <tr>
+                <th class="TableTitle" hidden="hidden">ID</th>
+                <th class="TableTitle">StartYear</th>
+                <th class="TableTitle">EndYear</th>
+                <th class="TableTitle">Division</th>
+                <th class="TableTitle">Active</th>
+                <th class="TableTitle">Action</th>
+            </tr>
+
+            @foreach (var season in Model)
+            {
+                <tr>
+                    <td hidden="hidden">@season.IdSeason</td>
+                    <td>@season.StartYear</td>
+                    <td>@season.EndYear</td>
+                    <td>@season.Division</td>
+                    <td>@season.IsCurrentSeason</td>
+
+                    <td><input type="button" id="btnEdit" name="btnEdit" value="Wijzigen" onclick="location.href = '@Url.Action("SeasonDetail", "Season", new {idSeason = @season.IdSeason})'" class="btn btn-primary" /></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+}
+

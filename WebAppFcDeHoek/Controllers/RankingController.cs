@@ -94,7 +94,7 @@ namespace WebAppFcDeHoek.Controllers
                 foreach (var ranking in model)
                     ranking.Points = (ranking.GamesWon * 3) + ranking.GamesDrawn;
 
-                return model.OrderBy(m => m.Points).ToList();
+                return model.OrderByDescending(m => m.Points).ThenByDescending(m => m.GamesWon).ThenByDescending(m => (m.GoalsScored - m.GoalsConceded)).ThenByDescending(m => m.GoalsScored).ToList();
             }
         }
 

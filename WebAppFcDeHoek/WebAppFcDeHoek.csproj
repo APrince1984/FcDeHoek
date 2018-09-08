@@ -151,11 +151,14 @@
     <Compile Include="Controllers\CalendarController.cs" />
     <Compile Include="Controllers\FcDeHoekGameController.cs" />
     <Compile Include="Controllers\GameManagerController.cs" />
+    <Compile Include="Controllers\HistoricStatsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LinksController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RankingController.cs" />
+    <Compile Include="Controllers\RecordsController.cs" />
     <Compile Include="Controllers\ScoreController.cs" />
+    <Compile Include="Controllers\SeasonController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\UnderConstructionController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -164,6 +167,7 @@
     <Compile Include="Data\FcDeHoekContext.cs" />
     <Compile Include="Data\Helper\GameTotal.cs" />
     <Compile Include="Data\Queries\GameQueries.cs" />
+    <Compile Include="Data\Queries\HistoricStatsQueries.cs" />
     <Compile Include="Data\Queries\PersonQueries.cs" />
     <Compile Include="Data\Queries\PersonStatisticsQueries.cs" />
     <Compile Include="Data\Queries\SeasonQueries.cs" />
@@ -171,6 +175,7 @@
     <Compile Include="Data\Queries\UserQueries.cs" />
     <Compile Include="Data\Tables\BaseDomain.cs" />
     <Compile Include="Data\Tables\Game.cs" />
+    <Compile Include="Data\Tables\HistoricStats.cs" />
     <Compile Include="Data\Tables\History.cs" />
     <Compile Include="Data\Tables\Person.cs" />
     <Compile Include="Data\Tables\PersonStats.cs" />
@@ -186,12 +191,15 @@
     <Compile Include="Models\FullCalendarModel.cs" />
     <Compile Include="Models\GameManagerModel.cs" />
     <Compile Include="Models\GameModel.cs" />
+    <Compile Include="Models\HistoricStatsModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\RankingModel.cs" />
     <Compile Include="Models\RankModel.cs" />
+    <Compile Include="Models\RecordsModel.cs" />
     <Compile Include="Models\ScoreModel.cs" />
+    <Compile Include="Models\SeasonModel.cs" />
     <Compile Include="Models\StatisticsModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -199,6 +207,7 @@
     <Compile Include="Structs\eEntry.cs" />
     <Compile Include="Structs\eNavigation.cs" />
     <Compile Include="Structs\eResult.cs" />
+    <Compile Include="Structs\eStatsSince.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -262,6 +271,12 @@
     <Content Include="Views\GameManager\AddMultipleGames.cshtml" />
     <Content Include="Views\Score\EditScores.cshtml" />
     <Content Include="Views\FcDeHoekGame\FcDeHoekGameDetail.cshtml" />
+    <Content Include="Views\Season\Index.cshtml" />
+    <Content Include="Views\Season\SeasonDetail.cshtml" />
+    <Content Include="Views\HistoricStats\Index.cshtml" />
+    <Content Include="Views\HistoricStats\Detail.cshtml" />
+    <Content Include="Views\Records\Index.cshtml" />
+    <Content Include="Views\Records\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

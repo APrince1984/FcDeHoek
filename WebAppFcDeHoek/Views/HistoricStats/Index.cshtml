@@ -1,0 +1,47 @@
+﻿@model List<WebAppFcDeHoek.Models.HistoricStatsModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Manage Historic Stats</h2>
+
+@using (Html.BeginForm("Detail", "HistoricStats", FormMethod.Post,
+    new { enctype = "multipart/form-data", @class = "form-group" }))
+{
+    <div>
+        <input type="button" id="btnAdd" name="btnAdd" value="Add" onclick="location.href = '@Url.Action("Detail", "HistoricStats", new {idStat = 0})'" class="btn btn-primary" />
+    </div>
+}
+@using (Html.BeginForm("Detail", "HistoricStats", FormMethod.Get,
+    new { enctype = "multipart/form-data", @class = "form-group" }))
+{
+    <table class="table table-bordered table-responsive table-hover">
+        <tbody>
+        <tr>
+            <th class="TableTitle" hidden="hidden">ID</th>
+            <th class="TableTitle">Season</th>
+            <th class="TableTitle">Player</th>
+            <th class="TableTitle">Goals</th>
+            <th class="TableTitle">Assists</th>
+            <th class="TableTitle">Penalties</th>
+        </tr>
+
+        @foreach (var stat in Model)
+        {
+        <tr>
+            <td hidden="hidden">@stat.IdHistoricStats</td>
+            <td>@stat.Season</td>
+            <td>@stat.Player</td>
+            <td>@stat.Goals </td>
+            <td>@stat.Assists </td>
+            <td>@stat.Penalties </td>
+            <td><input type="button" id="btnEdit" name="btnEdit" value="Wijzigen" onclick="location.href = '@Url.Action("Detail", "HistoricStats", new {idStat = @stat.IdHistoricStats})'" class="btn btn-primary" /></td>
+        </tr>
+        }
+
+        </tbody>
+    </table>
+
+}

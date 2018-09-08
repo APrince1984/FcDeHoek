@@ -126,7 +126,11 @@ namespace WebAppFcDeHoek.Controllers
                 var models = new List<PersonModel>();
                 var persons = PersonQueries.GetPlayers(context).ToList();
                 foreach (var person in persons)
-                    models.Add(MapPersonToPersonModel(context, person));
+                {
+                    if (person.PerkezNumber != null)
+                        models.Add(MapPersonToPersonModel(context, person));
+                }
+                    
 
                 return models;
             }

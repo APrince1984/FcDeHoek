@@ -16,7 +16,7 @@ namespace WebAppFcDeHoek.Data.Tables
 
         [Column("ID_Game"), ForeignKey("PersonStatsGame")]
         public virtual int IdGame { get; set; }
-        public virtual Team PersonStatsGame { get; set; }
+        public virtual Game PersonStatsGame { get; set; }
 
         [Column("Goals")]
         public virtual int? Goals { get; set; }
