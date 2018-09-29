@@ -152,6 +152,7 @@
     <Compile Include="Controllers\FcDeHoekGameController.cs" />
     <Compile Include="Controllers\GameManagerController.cs" />
     <Compile Include="Controllers\HistoricStatsController.cs" />
+    <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LinksController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -277,6 +278,7 @@
     <Content Include="Views\HistoricStats\Detail.cshtml" />
     <Content Include="Views\Records\Index.cshtml" />
     <Content Include="Views\Records\Detail.cshtml" />
+    <Content Include="Views\History\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

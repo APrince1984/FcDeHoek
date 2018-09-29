@@ -49,7 +49,7 @@ namespace WebAppFcDeHoek.Controllers
                 teams.AddRange(allGames.Select(g => g.GameAwayTeam.Name).Distinct().ToList());
                 teams = teams.Distinct().ToList();
 
-                if (teams.Count < allPlayedGames.Count)
+                if (teams.Count < allPlayedGames.Count && allPlayedGames.Count == 0) 
                     return CreateZeroRanking(teams);
 
                 foreach (var team in teams)
