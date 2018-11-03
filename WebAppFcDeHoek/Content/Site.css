@@ -183,6 +183,7 @@
     min-height: 120px;
     max-width: 90px;
     max-height: 120px;
+    image-orientation: from-image;
 }
 
 /* make table text size responsive*/
