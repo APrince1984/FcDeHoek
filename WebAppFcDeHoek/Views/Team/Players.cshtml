@@ -1,0 +1,69 @@
+﻿@model List<WebAppFcDeHoek.Models.PersonModel>
+
+@{
+    ViewBag.Title = "Players";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Spelers</h2>
+
+@foreach (var person in Model)
+{   
+
+    <div class="col-sm-4 col-md-4">
+        <table class="table table-bordered table-responsive table-hover">
+            <tbody>
+                <tr>
+                    <td>
+                        <table style="border: none; border-top: none; border-color: transparent; width:80%">
+                            <tbody style="border: none; border-color:transparent">
+                                <tr style="border: none; border-top: none">
+                                    <td style="border: none; border-color: transparent; width:40%"><img class="personImage" src=@person.Picture alt="Can't load Image'" /></td>
+                                    <td style="border: none; border-color: transparent; width:60%">
+                                        <div class="row">
+                                            @Html.Label(person.PerkezNumber.ToString())
+                                        </div>
+                                        <div class="row">
+                                            @Html.Label(person.Name)
+                                            @Html.Label(person.FirstName)
+                                        </div>
+                                        <div class="row-floatRight">
+                                            <table style="border-spacing: 0; border-collapse: collapse; padding:0">
+                                                <tbody style="border-spacing: 0; border-collapse: collapse; padding:0">
+                                                    <tr style="border-spacing: 0; border-collapse: collapse; padding: 0; border: solid grey 0.25px; background-color: grey ">
+                                                        <th style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px; background-color: grey">Comp.</th>
+                                                        <th style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px; background-color: grey">Pl.</th>
+                                                        <th style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px; background-color: grey">G.</th>
+                                                        <th style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px; background-color: grey">A.</th>
+                                                    </tr>
+                                                    <tr style="border-spacing: 0; border-collapse: collapse; padding:0" ; border: solid grey 0.25px>
+                                                        <td style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px">Friendly</td>
+                                                        <td style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px">@person.Stats.FriendlyGamesPlayed</td>
+                                                        <td style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px">@person.Stats.GoalsInFriendly</td>
+                                                        <td style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px">@person.Stats.AssistsInFriendly</td>
+                                                    </tr>
+                                                    <tr style="border-spacing: 0; border-collapse: collapse; padding:0" ; border: solid grey 0.25px>
+                                                        <td style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px">League</td>
+                                                        <td style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px">@person.Stats.LeagueGamesPlayed</td>
+                                                        <td style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px">@person.Stats.GoalsInLeague</td>
+                                                        <td style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px">@person.Stats.AssistsInLeague</td>
+                                                    </tr>
+                                                    <tr style="border-spacing: 0; border-collapse: collapse; padding:0" ; border: solid grey 0.25px>
+                                                        <td style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px">Cup</td>
+                                                        <td style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px">@person.Stats.CupGamesPlayed</td>
+                                                        <td style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px">@person.Stats.GoalsInCup</td>
+                                                        <td style="border-spacing: 0; border-collapse: collapse; padding:1px; border: solid grey 0.25px">@person.Stats.AssistsInCup</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}

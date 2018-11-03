@@ -1,0 +1,38 @@
+﻿@model List<WebAppFcDeHoek.Models.RecordsModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Records</h2>
+
+@using (Html.BeginForm("GoalDetail", "Records", FormMethod.Get,
+    new {enctype = "multipart/form-data", @class = "form-group"}))
+{
+    foreach (var record in Model)
+    {
+        <div class="form-group">
+            <table class="table table-bordered table-responsive table-hover">
+                <tbody>
+                <tr>
+                    <th class="TableTitle" colspan="4">@record.Title</th>
+                </tr>
+                <tr>
+                    <td class="col-sm-4">Topschutter</td>
+                    <td class="col-sm-4">@record.GoalRecord.Player</td>
+                    <td class="col-sm-2">@record.GoalRecord.Stat</td>
+                    <td class="col-sm-2"><input type="button" id="btnDetail" name="btnDetail" value="Detail" onclick="location.href = '@Url.Action("GoalDetail", "Records", new {idSeason = @record.IdSeason})'" class="btn btn-primary" /></td>
+                </tr>
+                <tr>
+                    <td class="col-sm-4">Assistenkoning</td>
+                    <td class="col-sm-4">@record.AssistRecord.Player</td>
+                    <td class="col-sm-2">@record.AssistRecord.Stat</td>
+                    <td class="col-sm-2"><input type="button" id="btnDetail" name="btnDetail" value="Detail" onclick="location.href = '@Url.Action("AssistDetail", "Records", new {idSeason = @record.IdSeason})'" class="btn btn-primary" /></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    }
+}
+

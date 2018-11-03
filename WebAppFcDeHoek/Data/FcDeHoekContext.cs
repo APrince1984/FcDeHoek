@@ -14,5 +14,9 @@ namespace WebAppFcDeHoek.Data
         public DbSet<Team> Teams { get; set; }
         public DbSet<BaseDomain> BaseDomains { get; set; }
         public DbSet<Game> Games { get; set; }
+        public DbSet<Person> Persons { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<PersonStats> PersonStatistics { get; set; }
+        public DbSet<HistoricStats> HistoricStatses { get; set; }
     }
 }

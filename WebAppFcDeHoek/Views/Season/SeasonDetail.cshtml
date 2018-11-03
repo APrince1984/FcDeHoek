@@ -1,0 +1,50 @@
+﻿@model WebAppFcDeHoek.Models.SeasonModel
+
+@{
+                /**/
+
+                ViewBag.Title = "SeasonDetail";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Season @Model.IdSeason - @Model.StartYear -  @Model.EndYear</h2>
+
+@using (Html.BeginForm("Save", "Season", FormMethod.Post,
+    new { enctype = "multipart/form-data", @class = "form-group" }))
+{
+    <div hidden="hidden">
+        @Html.TextBoxFor(model => model.IdSeason, new { @class = "form-control" })
+    </div>
+    <p>
+        <div class="form-group row">
+            @Html.Label("StartYear: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.StartYear, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+    <p>
+        <div class="form-group row">
+            @Html.Label("EndYear: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.EndYear, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            @Html.Label("Division: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.Division, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            <input type="submit" id="btnSave" name="btnSave" value="Save" class="btn btn-primary" />
+        </div>
+    </p>
+}
+

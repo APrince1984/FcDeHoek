@@ -1,0 +1,70 @@
+﻿@model WebAppFcDeHoek.Models.HistoricStatsModel
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Historic Stats @Model.Season - @Model.Player</h2>
+
+@using (Html.BeginForm("Save", "HistoricStats", FormMethod.Post,
+    new { enctype = "multipart/form-data", @class = "form-group" }))
+{
+    <div hidden="hidden">
+        @Html.TextBoxFor(model => model.IdHistoricStats, new { @class = "form-control" })
+    </div>
+    <p>
+        <div class="form-group row">
+            <div class="col-sm-3 col-md-3">
+                @Html.Label("Season: ")
+            </div>
+            <div class="col-sm-10">
+                @Html.DropDownListFor(n => n.IdSeason, new SelectList(Model.AllSeasons, "IdSeason", "Season", Model.IdSeason), new { @class = "col-sm-4 col-md-4 form-control" })
+            </div>
+            </div>
+    </p>
+    <p>
+        <div class="form-group row">
+            <div class="col-sm-3 col-md-3">
+                @Html.Label("Speler: ")
+            </div>
+            <div class="col-sm-10">
+                @Html.DropDownListFor(n => n.IdPlayer, new SelectList(Model.AllPlayers, "IdPlayer", "Player", Model.IdPlayer), new { @class = "col-sm-4 col-md-4 form-control" })
+            </div>
+            </div>
+
+    </p>
+    <p>
+        <div class="form-group row">
+            @Html.Label("Goals: ", new { @class = "control-label col-sm-3 col-md-3" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.Goals, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            @Html.Label("Assists: ", new { @class = "control-label col-sm-3 col-md-3" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.Assists, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            @Html.Label("Penalties: ", new { @class = "control-label col-sm-3 col-md-3" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.Penalties, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            <input type="submit" id="btnSave" name="btnSave" value="Save" class="btn btn-primary" />
+        </div>
+    </p>
+}
+

@@ -6,27 +6,27 @@
 }
 
 <h2>Rangschikking Competitie</h2>
-<div>
+
     <h4>Season : @Model.Season</h4>
-</div>
+
 <div>
     <table class="table table-bordered table-responsive table-hover">
         <tbody>
             <tr>
-                <th>Ploeg</th>
-                <th>Gespeeld</th>
-                <th>Gewonnen</th>
-                <th>Gelijk</th>
-                <th>Verloren</th>
-                <th>Doelptn voor</th>
-                <th>Doelptn tegen</th>
-                <th>Punten</th>
+                <th class="TableTitle">Ploeg</th>
+                <th class="TableTitle">Gespeeld</th>
+                <th class="TableTitle">Gewonnen</th>
+                <th class="TableTitle">Gelijk</th>
+                <th class="TableTitle">Verloren</th>
+                <th class="TableTitle">Doelptn voor</th>
+                <th class="TableTitle">Doelptn tegen</th>
+                <th class="TableTitle">Punten</th>
             </tr>
 
         @foreach (var rank in Model.Ranking)
         {
             var cssClass = rank.Team == "F.C. De Hoek" ? "prince" : "";
-            <tr class=@cssClass>
+            <tr>
                 <td>@rank.Team</td>
                 <td>@rank.GamesPlayed</td>
                 <td>@rank.GamesWon</td>

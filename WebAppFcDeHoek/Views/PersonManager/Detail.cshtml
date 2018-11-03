@@ -1,0 +1,104 @@
+﻿@using WebAppFcDeHoek.Structs
+@model WebAppFcDeHoek.Models.PersonModel
+
+@{
+                /**/
+
+                ViewBag.Title = "Detail";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Person @Model.IdPerson - @Model.Name @Model.FirstName</h2>
+
+@using (Html.BeginForm("Save", "PersonManager", FormMethod.Post,
+    new { enctype = "multipart/form-data", @class = "form-group" }))
+{
+    <div hidden="hidden">
+        @Html.TextBoxFor(model => model.IdPerson, new { @class = "form-control" })
+    </div>
+    <p>
+        <div class="form-group row">
+            @Html.Label("Name: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            @Html.Label("FirstName: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            @Html.Label("Perkez Number: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.PerkezNumber, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+    <p>
+        <div class="form-group row">
+            @Html.Label("Function: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.DropDownListFor(n => n.Function, new SelectList(eFunction.GetAllFunctions(), "key", "value", Model.Function), new { @class = "col-sm-4 col-md-4 form-control"})
+            </div>
+        </div>
+    </p>
+    <p>
+        <div class="form-group row">
+            @Html.Label("Is Player: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.CheckBoxFor(model => model.IsPlayer)
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            @Html.Label("Is Staff: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.CheckBoxFor(model => model.IsStaff)
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            @Html.Label("Picture: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.Picture, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            @Html.Label("BirthDate: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.BirthDate, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            @Html.Label("Phone Number: ", new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <div class="form-group row">
+            <input type="submit" id="btnSave" name="btnSave" value="Save" class="btn btn-primary" />
+        </div>
+    </p>
+}
+

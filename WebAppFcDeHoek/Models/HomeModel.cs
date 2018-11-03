@@ -19,6 +19,8 @@ namespace WebAppFcDeHoek.Models
         public Team PreviousGameHomeTeam { get; set; }
         public Team PreviousGameAwayTeam { get; set; }
         
+        public List<Game> NextGames { get; set; }
+        
         public int PreviousGameResult { get; set; }
 
         public List<Team> AllTeams { get; set; }

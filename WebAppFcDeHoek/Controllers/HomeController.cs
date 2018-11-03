@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 using WebAppFcDeHoek.Data;
 using WebAppFcDeHoek.Data.Queries;
-using WebAppFcDeHoek.Data.Tables;
 using WebAppFcDeHoek.Models;
 using WebAppFcDeHoek.Structs;
 
@@ -21,7 +17,8 @@ namespace WebAppFcDeHoek.Controllers
                 {
                     CurrentDivision = GetCurrentDivision(context),
                     PreviousGame = GameQueries.GetPreviousGame(context),
-                    NextGame = GameQueries.GetNextGame(context)
+                    NextGame = GameQueries.GetNextGame(context),
+                    NextGames = GameQueries.GetNextGames(context).ToList()
                 };
 
                 if (model.PreviousGame != null)
@@ -36,6 +33,7 @@ namespace WebAppFcDeHoek.Controllers
                 {
                     model.NextGameHomeTeam = TeamQueries.GetTeamById(context, model.NextGame.IdHomeTeam);
                     model.NextGameAwayTeam = TeamQueries.GetTeamById(context, model.NextGame.IdAwayTeam);
+
                 }
 
                

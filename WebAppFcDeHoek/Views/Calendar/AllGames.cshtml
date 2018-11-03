@@ -1,0 +1,34 @@
+﻿@model WebAppFcDeHoek.Models.FullCalendarModel
+
+@{
+    ViewBag.Title = "AllGames";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Wedstrijden @Model.SeasonDescription</h2>
+
+@foreach (var gameGroup in Model.GamesPerDate)
+{
+<div class="form-group">
+    <h4>@Html.Label($"{gameGroup.Key.ToString("dd/MM/yyyy")} - {gameGroup.Value.First().Competition}")</h4>
+    <table class="table table-bordered table-responsive table-hover">
+        <tbody>
+        <tr>
+            <th>Thuisploeg</th>
+            <th>Uitploeg</th>
+            <th>Resultaat</th>
+        </tr>
+        @foreach (var game in gameGroup.Value)
+        {
+            <tr>
+                <td class="col-sm-4">@game.HomeTeam</td>
+                <td class="col-sm-4">@game.AwayTeam</td>
+                <td class="col-sm-2">@game.Result</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+}
+
+
