@@ -1,7 +1,9 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using WebAppFcDeHoek.Data;
 using WebAppFcDeHoek.Data.Queries;
+using WebAppFcDeHoek.Data.Tables;
 using WebAppFcDeHoek.Models;
 using WebAppFcDeHoek.Structs;
 
@@ -18,7 +20,7 @@ namespace WebAppFcDeHoek.Controllers
                     CurrentDivision = GetCurrentDivision(context),
                     PreviousGame = GameQueries.GetPreviousGame(context),
                     NextGame = GameQueries.GetNextGame(context),
-                    NextGames = GameQueries.GetNextGames(context).ToList()
+                    NextGames = GameQueries.GetNextGames(context) == null ? new List<Game>() : GameQueries.GetNextGames(context).ToList()
                 };
 
                 if (model.PreviousGame != null)
