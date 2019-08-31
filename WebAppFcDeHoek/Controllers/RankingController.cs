@@ -42,7 +42,7 @@ namespace WebAppFcDeHoek.Controllers
 
                 
 
-                var allPlayedGames = allGames.Where(g => g.GoalsHomeTeam != null && g.GoalsAwayTeam != null && g.MatchDate <= DateTime.Today.Date).ToList();
+                var allPlayedGames = allGames.Where(g => g.GoalsHomeTeam != null && g.GoalsAwayTeam != null && g.MatchDate.Date <= DateTime.Today.Date).ToList();
 
                 var teams = new List<string>();
                 teams.AddRange(allGames.Select(g => g.GameHomeTeam.Name).Distinct().ToList());
