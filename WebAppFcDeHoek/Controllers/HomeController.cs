@@ -54,7 +54,7 @@ namespace WebAppFcDeHoek.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "You can contact us here:";
 
             return View();
         }
