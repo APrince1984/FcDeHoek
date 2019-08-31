@@ -6,7 +6,7 @@ namespace WebAppFcDeHoek.Data.Queries
 {
     public static class SeasonQueries
     {
-        private const int _seasonStartMonth = 9;
+        private const int _seasonStartMonth = 8;
 
         public static Season GetById(FcDeHoekContext context, int idSeason)
         {
